@@ -2,11 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/posts/codeforces-1257g/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/dp/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/knapsack/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-04-21T03:53:08+06:00</lastmod>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/ntt/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/number-theory/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/oeis/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-04-21T03:53:08+06:00</lastmod>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/testing-math/</loc>
     <lastmod>2021-04-21T03:53:08+06:00</lastmod>
@@ -21,9 +42,6 @@
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/math/</loc>
-    <lastmod>2021-04-21T03:26:08+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/categories/</loc>
