@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Apr 2021 23:41:52 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/oeis/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Codeforces 1257g</title>
+      <title>Codeforces - 1257g</title>
       <link>https://st3inum.github.io/posts/codeforces-1257g/</link>
       <pubDate>Wed, 21 Apr 2021 23:41:52 +0600</pubDate>
       
       <guid>https://st3inum.github.io/posts/codeforces-1257g/</guid>
-      <description> cpp     var xmlHttp = new XMLHttpRequest(); xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/1257g.cpp&#39;, false ); xmlHttp.send( null ); var div = document.getElementById(&#39;code1&#39;); div.textContent = &#39;\n&#39;+xmlHttp.responseText;  Reference:  OEIS A096825 Codeforces Editorial  </description>
+      <description> cpp     var xmlHttp = new XMLHttpRequest(); xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/1257g.cpp&#39;, false ); xmlHttp.send( null ); var div = document.getElementById(&#39;code1&#39;); div.textContent = &#39;\n&#39;+xmlHttp.responseText;  Reference:  Codeforces - 1257G Codeforces Editorial OEIS A096825  </description>
       <content>
 
 
@@ -41,8 +41,9 @@
 
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://oeis.org/A096825&#34;&gt;OEIS A096825&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeforces.com/contest/1257/problem/G&#34;&gt;Codeforces - 1257G&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://codeforces.com/blog/entry/71434&#34;&gt;Codeforces Editorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://oeis.org/A096825&#34;&gt;OEIS A096825&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>

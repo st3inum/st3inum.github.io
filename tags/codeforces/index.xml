@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dp on MathBugs</title>
-    <link>https://st3inum.github.io/tags/dp/</link>
-    <description>Recent content in dp on MathBugs</description>
+    <title>codeforces on MathBugs</title>
+    <link>https://st3inum.github.io/tags/codeforces/</link>
+    <description>Recent content in codeforces on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 23:41:52 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 23:41:52 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Codeforces - 1257g</title>
       <link>https://st3inum.github.io/posts/codeforces-1257g/</link>
