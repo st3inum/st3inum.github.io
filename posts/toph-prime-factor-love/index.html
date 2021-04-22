@@ -157,19 +157,39 @@
   <div class="post-content"><div>
         <h2 id="problem-description">Problem Description:<a href="#problem-description" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li>$mod = 1000009$</li>
-<li>$[p]$ is $1$ if $p$ true , else $0$</li>
-<li>$f(n) = \sum_{i=2}^{n-1}{[i|n]i}$</li>
-<li>$S(n) = \sum_{i=1}^{n}{f(i)}$ for a given n</li>
-<li>You need to find , sum of all prime factor of S(n)%mod</li>
+<li>
+<p>$mod = 1000009$</p>
+</li>
+<li>
+<p>$ [p] = \begin{cases} 1 \text{ if $p$ is true} \newline 0 \text{ if $p$ is not true} \end{cases}$</p>
+</li>
+<li>
+<p>$f(n) = \sum_{i=2}^{n-1}{[i|n]i}$</p>
+</li>
+<li>
+<p>$S(n) = \sum_{i=1}^{n}{f(i)}$ for a given n</p>
+</li>
+<li>
+<p>You need to find , sum of all prime factor of S(n)%mod</p>
+</li>
 </ul>
 <h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li>We know , $\sigma_1(n) = \sum_{i=1}^{n}{[i|n]i}$</li>
-<li>$sum(n) = \sum_{i=1}^{n}{i}$</li>
-<li>$sum(l,r) = \sum_{i=l}^{r}{i}$</li>
-<li>Let assume , $ssod(n) = \sum_{i=1}^{n}{\sigma_1(i)}$ , ssod = sum of sum-of-divisor</li>
-<li>We can represent $S(n) = ssod(n) - sum(n) - n + [n&gt;=1]$</li>
+<li>
+<p>We know , $\sigma_1(n) = \sum_{i=1}^{n}{[i|n]i}$</p>
+</li>
+<li>
+<p>$sum(n) = \sum_{i=1}^{n}{i}$</p>
+</li>
+<li>
+<p>$sum(l,r) = \sum_{i=l}^{r}{i}$</p>
+</li>
+<li>
+<p>Let assume , $ssod(n) = \sum_{i=1}^{n}{\sigma_1(i)}$ , ssod = sum of sum-of-divisor</p>
+</li>
+<li>
+<p>We can represent $S(n) = ssod(n) - sum(n) - n + [n&gt;=1]$</p>
+</li>
 </ul>
 <p>Now , if we can find $ssod(n)$ faster, we can solve the problem.</p>
 <p>$\Longrightarrow ssod(n) = \sum_{i=1}^{n}{\sigma_1(i)}$</p>
@@ -177,7 +197,7 @@
 <p>$\Longrightarrow ssod(n) = \sum_{i=1}^{n}{\sum_{j=1}^{n}{[j|i]j}}$</p>
 <p>$\Longrightarrow ssod(n) = \sum_{i=j}^{n}{j \times \sum_{i=1}^{n}{[j|i]}}$</p>
 <p>$\Longrightarrow ssod(n) = \sum_{i=j}^{n}{j \times \lfloor \frac{n}{j} \rfloor}$</p>
-<p>Now there, might be $O(\sqrt(n))$ different values for $\lfloor \frac{n}{j} \rfloor$ [This is also known as Harmonic lemma]. We will iterate over all such values of $\lfloor \frac{n}{j} \rfloor$ , and sum up there contribution. Thus we can calculate values for $ssod(n)$ in $O(\sqrt(n))$ and then for $S(n)$.</p>
+<p>Now there, might be $O(\sqrt{n})$ different values for $\lfloor \frac{n}{j} \rfloor$ [This is also known as Harmonic lemma]. We will iterate over all such values of $\lfloor \frac{n}{j} \rfloor$ , and sum up there contribution. Thus we can calculate values for $ssod(n)$ in $O(\sqrt{n})$ and then for $S(n)$.</p>
 <p>For the second part , we will maintain a sieve for values $[0,mod)$ and precalculate sum of prime factor of all the number in the range.</p>
 
 
