@@ -153,9 +153,9 @@
   
 
   <div class="post-content"><div>
-        <p>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain <strong>&ldquo;number of divisor of $n$ which is smaller or equal than $sqrt(n)$&quot;</strong>.</p>
+        <p>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain <strong>&ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&quot;</strong>.</p>
 <p>For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.</p>
-<p>After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i&lt;=sqrt(n)$ , we will have another divisor $frac{n,i}&gt;=sqrt(n)$. [if n is a square number , we will subtract $1$ also after multiplication].</p>
+<p>After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$. [if n is a square number , we will subtract $1$ also after multiplication].</p>
 
 
 

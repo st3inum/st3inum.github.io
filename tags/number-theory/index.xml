@@ -13,12 +13,12 @@
       <pubDate>Thu, 22 Apr 2021 10:03:45 +0600</pubDate>
       
       <guid>https://st3inum.github.io/posts/uva-294/</guid>
-      <description>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &amp;ldquo;number of divisor of $n$ which is smaller or equal than $sqrt(n)$&amp;quot;.
+      <description>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &amp;ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&amp;quot;.
 For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.
-After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i&amp;lt;=sqrt(n)$ , we will have another divisor $frac{n,i}&amp;gt;=sqrt(n)$.</description>
-      <content>&lt;p&gt;In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &lt;strong&gt;&amp;ldquo;number of divisor of $n$ which is smaller or equal than $sqrt(n)$&amp;quot;&lt;/strong&gt;.&lt;/p&gt;
+After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$.</description>
+      <content>&lt;p&gt;In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &lt;strong&gt;&amp;ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&amp;quot;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.&lt;/p&gt;
-&lt;p&gt;After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i&amp;lt;=sqrt(n)$ , we will have another divisor $frac{n,i}&amp;gt;=sqrt(n)$. [if n is a square number , we will subtract $1$ also after multiplication].&lt;/p&gt;
+&lt;p&gt;After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$. [if n is a square number , we will subtract $1$ also after multiplication].&lt;/p&gt;
 
 
 
