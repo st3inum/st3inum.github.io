@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>Divisors - UVA 294 :: MathBugs</title>
+    <title>Alphabet - Codeforces - 101201a :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="find nod for each number in [l,r]" />
-<meta name="keywords" content="sieve, nod" />
+<meta name="description" content="insert minimum number of character in a given string after which the resulting string contain a subsequence `abcdefgh...xyz`" />
+<meta name="keywords" content="acm icpc, pacific northwest regional, 2016-2017" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/posts/uva-294/" />
+<link rel="canonical" href="https://st3inum.github.io/posts/codeforces-101201a/" />
 
 
 
@@ -41,9 +41,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Divisors - UVA 294">
-<meta property="og:description" content="find nod for each number in [l,r]" />
-<meta property="og:url" content="https://st3inum.github.io/posts/uva-294/" />
+<meta property="og:title" content="Alphabet - Codeforces - 101201a">
+<meta property="og:description" content="insert minimum number of character in a given string after which the resulting string contain a subsequence `abcdefgh...xyz`" />
+<meta property="og:url" content="https://st3inum.github.io/posts/codeforces-101201a/" />
 <meta property="og:site_name" content="MathBugs" />
 
   <meta property="og:image" content="https://st3inum.github.io/">
@@ -52,7 +52,7 @@
 <meta property="og:image:height" content="1024">
 
 
-  <meta property="article:published_time" content="2021-04-22 10:03:45 &#43;0600 &#43;06" />
+  <meta property="article:published_time" content="2021-04-22 21:55:00 &#43;0600 &#43;06" />
 
 
 
@@ -126,7 +126,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/uva-294/">Divisors - UVA 294</a></h1>
+    <a href="https://st3inum.github.io/posts/codeforces-101201a/">Alphabet - Codeforces - 101201a</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -141,9 +141,9 @@
   
   <span class="post-tags">
     
-    #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/dp/">dp</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/segmented-sieve/">segmented sieve</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/codeforces/">codeforces</a>&nbsp;
     
   </span>
   
@@ -153,9 +153,21 @@
   
 
   <div class="post-content"><div>
-        <p>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain <strong>&ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&quot;</strong>.</p>
-<p>For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.</p>
-<p>After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$. [if n is a square number , we will subtract $1$ also after multiplication].</p>
+        <h2 id="hint">Hint:<a href="#hint" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Maintain a function with current position of the string that can we take and number of last character that we have taken as state.</p>
+<p>We have three option for transition:</p>
+<ul>
+<li>
+<p>take current charecter as the new character of our <code>abcdef...</code> string [if it is possible], and go to the next position of our given string.</p>
+</li>
+<li>
+<p>ignore the current character , and go to the next position of our given string.</p>
+</li>
+<li>
+<p>insert a new character as the new character of our <code>abcdef...</code> string, and stay at the same position of our given string.</p>
+</li>
+</ul>
+<p>Saving all state in DP table is enough for this problem.</p>
 
 
 
@@ -173,7 +185,7 @@
 
 <script type="text/javascript">
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/294.cpp', false ); 
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/101201a.cpp', false ); 
     xmlHttp.send( null );
     var div = document.getElementById('code1');
     div.textContent = '\n'+xmlHttp.responseText;
@@ -184,7 +196,7 @@
 
 <h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=230">UVA - 294</a></li>
+<li><a href="https://codeforces.com/contest/1257/problem/G">Codeforces - 1257G</a></li>
 </ul>
 
       </div></div>
@@ -198,17 +210,10 @@
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://st3inum.github.io/posts/codeforces-101201a/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Alphabet - Codeforces - 101201a</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://st3inum.github.io/posts/toph-prime-factor-love/">
-                <span class="button__text">Toph - Prime Factor Love</span>
+            <a href="https://st3inum.github.io/posts/uva-294/">
+                <span class="button__text">Divisors - UVA 294</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

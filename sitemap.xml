@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://st3inum.github.io/posts/uva-294/</loc>
-    <lastmod>2021-04-22T10:03:45+06:00</lastmod>
+    <loc>https://st3inum.github.io/posts/codeforces-101201a/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/codeforces/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/dp/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-04-22T21:55:00+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/uva-294/</loc>
     <lastmod>2021-04-22T10:03:45+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/number-theory/</loc>
     <lastmod>2021-04-22T10:03:45+06:00</lastmod>
   </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-04-22T10:03:45+06:00</lastmod>
-  </url><url>
     <loc>https://st3inum.github.io/tags/segmented-sieve/</loc>
-    <lastmod>2021-04-22T10:03:45+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-04-22T10:03:45+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/harmonic-lemma/</loc>
@@ -32,13 +41,7 @@
     <loc>https://st3inum.github.io/posts/toph-prime-factor-love/</loc>
     <lastmod>2021-04-22T02:31:20+06:00</lastmod>
   </url><url>
-    <loc>https://st3inum.github.io/tags/codeforces/</loc>
-    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
-  </url><url>
     <loc>https://st3inum.github.io/posts/codeforces-1257g/</loc>
-    <lastmod>2021-04-21T23:41:52+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/dp/</loc>
     <lastmod>2021-04-21T23:41:52+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/knapsack/</loc>
