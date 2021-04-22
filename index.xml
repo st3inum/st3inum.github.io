@@ -6,7 +6,104 @@
     <description>Recent content on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 21:55:00 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 00:28:55 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Staircases - Timus 1017</title>
+      <link>https://st3inum.github.io/posts/timus-1017/</link>
+      <pubDate>Fri, 23 Apr 2021 00:28:55 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/timus-1017/</guid>
+      <description>Maintain a function with current position(column) of the staircases($i$) , number of remaining block($r$) , number of block we have used for the last column($l$).
+for $i^{th}$ position we can use $x\in [1,min(r,l-1)]$ block in this step.
+But if we use dp table of $500 \times 500 \times 500$ size it will cause you MLE.
+Notice that, we dont need position($i$) here, only things we need here if $i$ is greater than $1$ or not.</description>
+      <content>&lt;p&gt;Maintain a function with current position(column) of the staircases($i$) , number of remaining block($r$) , number of block we have used for the last column($l$).&lt;/p&gt;
+&lt;p&gt;for $i^{th}$ position we can use $x\in [1,min(r,l-1)]$ block in this step.&lt;/p&gt;
+&lt;p&gt;But if we use dp table of $500 \times 500 \times 500$ size it will cause you MLE.&lt;/p&gt;
+&lt;p&gt;Notice that, we dont need position($i$) here, only things we need here if $i$ is greater than $1$ or not. Hence we can minimise $i$ with $2$. Then size of our dp table will be $2 \times 500 \times 500$ .&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;code: 1&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/timus\/1017.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;p&gt;But actually we don&amp;rsquo;t need $i$ for this code. But Why?
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+spoiler
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;pre&gt;&lt;code&gt;try it yourself.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;The code will be like this:
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;2&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;code: 2&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/timus\/1017(alter).cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code2&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://acm.timus.ru/problem.aspx?space=1&amp;amp;num=1017&#34;&gt;Timus - 1017&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Alphabet - Codeforces - 101201a</title>
       <link>https://st3inum.github.io/posts/codeforces-101201a/</link>

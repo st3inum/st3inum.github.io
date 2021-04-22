@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>Alphabet - Codeforces - 101201a :: MathBugs</title>
+    <title>Staircases - Timus 1017 :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="insert minimum number of character in a given string after which the resulting string contain a subsequence `abcdefgh...xyz`" />
-<meta name="keywords" content="acm icpc, pacific northwest regional, 2016-2017" />
+<meta name="description" content="Basic Dp problem" />
+<meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/posts/codeforces-101201a/" />
+<link rel="canonical" href="https://st3inum.github.io/posts/timus-1017/" />
 
 
 
@@ -41,9 +41,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Alphabet - Codeforces - 101201a">
-<meta property="og:description" content="insert minimum number of character in a given string after which the resulting string contain a subsequence `abcdefgh...xyz`" />
-<meta property="og:url" content="https://st3inum.github.io/posts/codeforces-101201a/" />
+<meta property="og:title" content="Staircases - Timus 1017">
+<meta property="og:description" content="Basic Dp problem" />
+<meta property="og:url" content="https://st3inum.github.io/posts/timus-1017/" />
 <meta property="og:site_name" content="MathBugs" />
 
   <meta property="og:image" content="https://st3inum.github.io/">
@@ -52,7 +52,7 @@
 <meta property="og:image:height" content="1024">
 
 
-  <meta property="article:published_time" content="2021-04-22 21:55:00 &#43;0600 &#43;06" />
+  <meta property="article:published_time" content="2021-04-23 00:28:55 &#43;0600 &#43;06" />
 
 
 
@@ -126,11 +126,11 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/codeforces-101201a/">Alphabet - Codeforces - 101201a</a></h1>
+    <a href="https://st3inum.github.io/posts/timus-1017/">Staircases - Timus 1017</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
-        2021-04-22 
+        2021-04-23 
       </span>
     
     
@@ -143,7 +143,7 @@
     
     #<a href="https://st3inum.github.io/tags/dp/">dp</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/codeforces/">codeforces</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/timus/">timus</a>&nbsp;
     
   </span>
   
@@ -153,21 +153,10 @@
   
 
   <div class="post-content"><div>
-        <h2 id="hint">Hint:<a href="#hint" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Maintain a function with current position of the string that can we take and number of last character that we have taken as state.</p>
-<p>We have three option for transition:</p>
-<ul>
-<li>
-<p>take current charecter as the new character of our <code>abcdef...</code> string [if it is possible], and go to the next position of our given string.</p>
-</li>
-<li>
-<p>ignore the current character , and go to the next position of our given string.</p>
-</li>
-<li>
-<p>insert a new character as the new character of our <code>abcdef...</code> string, and stay at the same position of our given string.</p>
-</li>
-</ul>
-<p>Saving all state in DP table is enough for this problem.</p>
+        <p>Maintain a function with current position(column) of the staircases($i$) , number of remaining block($r$) , number of block we have used for the last column($l$).</p>
+<p>for $i^{th}$ position we can use $x\in [1,min(r,l-1)]$ block in this step.</p>
+<p>But if we use dp table of $500 \times 500 \times 500$ size it will cause you MLE.</p>
+<p>Notice that, we dont need position($i$) here, only things we need here if $i$ is greater than $1$ or not. Hence we can minimise $i$ with $2$. Then size of our dp table will be $2 \times 500 \times 500$ .</p>
 
 
 
@@ -175,7 +164,7 @@
     <input id="1" type="checkbox"  />
     <label for="1">
       <span class="collapsable-code__language">cpp</span>
-      
+      <span class="collapsable-code__title">code: 1</span>
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
     <pre class="language-cpp" ><code id="code1">
@@ -185,7 +174,7 @@
 
 <script type="text/javascript">
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/101201a.cpp', false ); 
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/timus\/1017.cpp', false ); 
     xmlHttp.send( null );
     var div = document.getElementById('code1');
     div.textContent = '\n'+xmlHttp.responseText;
@@ -194,9 +183,59 @@
 </script>
 
 
+<p>But actually we don&rsquo;t need $i$ for this code. But Why?
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+spoiler
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
+<pre><code>try it yourself.
+</code></pre>
+
+</div>
+</div>
+</div>
+</p>
+<p>The code will be like this:
+
+
+
+  <div class="collapsable-code">
+    <input id="2" type="checkbox"  />
+    <label for="2">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">code: 2</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code2">
+</code></pre>
+  </div>
+
+
+<script type="text/javascript">
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/timus\/1017(alter).cpp', false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById('code2');
+    div.textContent = '\n'+xmlHttp.responseText;
+    
+    
+</script>
+
+</p>
 <h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://codeforces.com/contest/1257/problem/G">Codeforces - 1257G</a></li>
+<li><a href="https://acm.timus.ru/problem.aspx?space=1&amp;num=1017">Timus - 1017</a></li>
 </ul>
 
       </div></div>
@@ -210,17 +249,10 @@
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://st3inum.github.io/posts/timus-1017/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Staircases - Timus 1017</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://st3inum.github.io/posts/uva-294/">
-                <span class="button__text">Divisors - UVA 294</span>
+            <a href="https://st3inum.github.io/posts/codeforces-101201a/">
+                <span class="button__text">Alphabet - Codeforces - 101201a</span>
                 <span class="button__icon">→</span>
             </a>
         </span>
