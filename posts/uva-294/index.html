@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>Toph - Prime Factor Love :: MathBugs</title>
+    <title>Divisors - UVA 294 :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Find sum of sum-of-divisor from 1 to n" />
-<meta name="keywords" content=", " />
+<meta name="description" content="find nod for each number in [l,r]" />
+<meta name="keywords" content="sieve, nod" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/posts/toph-prime-factor-love/" />
+<link rel="canonical" href="https://st3inum.github.io/posts/uva-294/" />
 
 
 
@@ -41,9 +41,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Toph - Prime Factor Love">
-<meta property="og:description" content="Find sum of sum-of-divisor from 1 to n" />
-<meta property="og:url" content="https://st3inum.github.io/posts/toph-prime-factor-love/" />
+<meta property="og:title" content="Divisors - UVA 294">
+<meta property="og:description" content="find nod for each number in [l,r]" />
+<meta property="og:url" content="https://st3inum.github.io/posts/uva-294/" />
 <meta property="og:site_name" content="MathBugs" />
 
   <meta property="og:image" content="https://st3inum.github.io/">
@@ -52,7 +52,7 @@
 <meta property="og:image:height" content="1024">
 
 
-  <meta property="article:published_time" content="2021-04-22 02:31:20 &#43;0600 &#43;06" />
+  <meta property="article:published_time" content="2021-04-22 10:03:45 &#43;0600 &#43;06" />
 
 
 
@@ -126,7 +126,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/toph-prime-factor-love/">Toph - Prime Factor Love</a></h1>
+    <a href="https://st3inum.github.io/posts/uva-294/">Divisors - UVA 294</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -134,18 +134,16 @@
       </span>
     
     
+    <span class="post-author">:: steinum</span>
+    
   </div>
 
   
   <span class="post-tags">
     
-    #<a href="https://st3inum.github.io/tags/sieve/">sieve</a>&nbsp;
-    
-    #<a href="https://st3inum.github.io/tags/harmonic-lemma/">harmonic lemma</a>&nbsp;
-    
     #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/toph/">toph</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/segmented-sieve/">segmented sieve</a>&nbsp;
     
   </span>
   
@@ -155,30 +153,9 @@
   
 
   <div class="post-content"><div>
-        <h2 id="problem-description">Problem Description:<a href="#problem-description" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<ul>
-<li>$mod = 1000009$</li>
-<li>$[p]$ is $1$ if $p$ true , else $0$</li>
-<li>$f(n) = \sum_{i=2}^{n-1}{[i|n]i}$</li>
-<li>$S(n) = \sum_{i=1}^{n}{f(i)}$ for a given n</li>
-<li>You need to find , sum of all prime factor of S(n)%mod</li>
-</ul>
-<h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<ul>
-<li>We know , $\sigma_1(n) = \sum_{i=1}^{n}{[i|n]i}$</li>
-<li>$sum(n) = \sum_{i=1}^{n}{i}$</li>
-<li>$sum(l,r) = \sum_{i=l}^{r}{i}$</li>
-<li>Let assume , $ssod(n) = \sum_{i=1}^{n}{\sigma_1(i)}$ , ssod = sum of sum-of-divisor</li>
-<li>We can represent $S(n) = ssod(n) - sum(n) - n + [n&gt;=1]$</li>
-</ul>
-<p>Now , if we can find $ssod(n)$ faster, we can solve the problem.</p>
-<p>$\Longrightarrow ssod(n) = \sum_{i=1}^{n}{\sigma_1(i)}$</p>
-<p>$\Longrightarrow ssod(n) = \sum_{i=1}^{n}{\sum_{j=1}^{i}{[j|i]j}}$</p>
-<p>$\Longrightarrow ssod(n) = \sum_{i=1}^{n}{\sum_{j=1}^{n}{[j|i]j}}$</p>
-<p>$\Longrightarrow ssod(n) = \sum_{i=j}^{n}{j \times \sum_{i=1}^{n}{[j|i]}}$</p>
-<p>$\Longrightarrow ssod(n) = \sum_{i=j}^{n}{j \times \lfloor \frac{n}{j} \rfloor}$</p>
-<p>Now there, might be $O(\sqrt(n))$ different values for $\lfloor \frac{n}{j} \rfloor$ [This is also known as Harmonic lemma]. We will iterate over all such values of $\lfloor \frac{n}{j} \rfloor$ , and sum up there contribution. Thus we can calculate values for $ssod(n)$ in $O(\sqrt(n))$ and then for $S(n)$.</p>
-<p>For the second part , we will maintain a sieve for values $[0,mod)$ and precalculate sum of prime factor of all the number in the range.</p>
+        <p>In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain <strong>&ldquo;number of divisor of $n$ which is smaller or equal than $sqrt(n)$&quot;</strong>.</p>
+<p>For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.</p>
+<p>After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i&lt;=sqrt(n)$ , we will have another divisor $frac{n,i}&gt;=sqrt(n)$. [if n is a square number , we will subtract $1$ also after multiplication].</p>
 
 
 
@@ -196,7 +173,7 @@
 
 <script type="text/javascript">
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/prime-factor-love.cpp', false ); 
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/294.cpp', false ); 
     xmlHttp.send( null );
     var div = document.getElementById('code1');
     div.textContent = '\n'+xmlHttp.responseText;
@@ -207,8 +184,7 @@
 
 <h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://toph.co/p/prime-factor-love">Toph - Prime Factor Love</a></li>
-<li><a href="https://codeforces.com/blog/entry/53925">Harmonic Lemma</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=230">UVA - 294</a></li>
 </ul>
 
       </div></div>
@@ -222,17 +198,10 @@
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://st3inum.github.io/posts/uva-294/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Divisors - UVA 294</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://st3inum.github.io/posts/codeforces-1257g/">
-                <span class="button__text">Divisor Set - Codeforces - 1257g</span>
+            <a href="https://st3inum.github.io/posts/toph-prime-factor-love/">
+                <span class="button__text">Toph - Prime Factor Love</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

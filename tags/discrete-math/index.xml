@@ -566,7 +566,8 @@ click to hide
       &lt;span class=&#34;collapsable-code__title&#34;&gt;Really cool snippet&lt;/span&gt;
       &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
     &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;int main() {
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+int main() {
   long long p, q;
   int m;
   scanf(&amp;#34;%lld %lld %d&amp;#34;, &amp;amp;p, &amp;amp;q, &amp;amp;m);
@@ -613,7 +614,8 @@ click to hide
       &lt;span class=&#34;collapsable-code__title&#34;&gt;Really cool snippet&lt;/span&gt;
       &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
     &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;int main() {
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;
+int main() {
   long long p, q;
   int m;
   scanf(&amp;#34;%lld %lld %d&amp;#34;, &amp;amp;p, &amp;amp;q, &amp;amp;m);

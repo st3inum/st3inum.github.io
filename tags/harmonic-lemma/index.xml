@@ -48,7 +48,8 @@
       
       &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
     &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/div&gt;
 
 
