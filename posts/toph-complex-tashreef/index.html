@@ -160,13 +160,13 @@
 
   <div class="post-content"><div>
         <h2 id="statement">Statement:<a href="#statement" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ , for given $L$ and $R$.</p>
+<p>In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ , for given $L$ and $R$.</p>
 <h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>From the lucas&rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 1} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]</p>
-<p>Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ . Hence , our answer will be $S(R)-S(L-1)$</p>
+<p>From the lucas&rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]</p>
+<p>Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ . Hence , our answer will be $S(R)-S(L-1)$</p>
 <p>Now,
 \begin{align}
-S(x) &amp; = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}} \newline
+S(x) &amp; = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}} \newline
 &amp; = \sum_{i=0}^{x}{(i+1) - 2^{f(i)}} \newline
 &amp; = \sum_{i=0}^{x}{(i+1)} - \sum_{i=0}^{x}{2^{f(i)}} \newline
 &amp; = \frac{(i+1)\times (i+2)}{2} - \sum_{i=0}^{x}{2^{f(i)}} \newline
