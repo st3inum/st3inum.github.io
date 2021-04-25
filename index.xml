@@ -6,7 +6,114 @@
     <description>Recent content on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 00:28:55 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 01:06:15 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toph Complex Tashreef</title>
+      <link>https://st3inum.github.io/posts/toph-complex-tashreef/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/toph-complex-tashreef/</guid>
+      <description>Statement: In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ , for given $L$ and $R$.
+Inside Math: From the lucas&amp;rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 1} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]
+Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ . Hence , our answer will be $S(R)-S(L-1)$</description>
+      <content>&lt;h2 id=&#34;statement&#34;&gt;Statement:&lt;/h2&gt;
+&lt;p&gt;In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ , for given $L$ and $R$.&lt;/p&gt;
+&lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
+&lt;p&gt;From the lucas&amp;rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 1} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]&lt;/p&gt;
+&lt;p&gt;Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}}$ . Hence , our answer will be $S(R)-S(L-1)$&lt;/p&gt;
+&lt;p&gt;Now,
+\begin{align}
+S(x) &amp;amp; = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}] \equiv 0}} \newline
+&amp;amp; = \sum_{i=0}^{x}{(i+1) - 2^{f(i)}} \newline
+&amp;amp; = \sum_{i=0}^{x}{(i+1)} - \sum_{i=0}^{x}{2^{f(i)}} \newline
+&amp;amp; = \frac{(i+1)\times (i+2)}{2} - \sum_{i=0}^{x}{2^{f(i)}} \newline
+\end{align}&lt;/p&gt;
+&lt;p&gt;Now the challenge is to calculate $\sum_{i=0}^{x}{2^{f(i)}}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to do this ?&lt;/strong&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Hint&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;digit dp&lt;/li&gt;
+&lt;li&gt;divide and conquer&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;divide-and-conquer-solution&#34;&gt;Divide and Conquer solution:&lt;/h2&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Hint for divide and conquer&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+print the values of $f(0),f(1),f(2),&amp;hellip;f(10)&amp;hellip;$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With some observation/math/googling we can find out that for any number $2^{k} - 1$ , $S(2^{k}-1) = 3^{k}$&lt;/p&gt;
+&lt;p&gt;Again , for any number $x$ , if $i$ is maximum number such that $2^{i}-1 &amp;lt; x$ , then we can write $S(x) = S(2^{i}-1) + 2 \times S(x - 2^i)$&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Complex Tashreef : (Divide and Conquer)&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/complex-tashreef.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;p&gt;To avoid &lt;strong&gt;TLE&lt;/strong&gt; precalculate all values of $S(2^{i} - 1)$ and return them in function $S(n)$ directly.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/lucas-theorem/&#34;&gt;Lucas&amp;rsquo;s Theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://oeis.org/A001316&#34;&gt;OEIS A001316&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://toph.co/p/complex-tashreef&#34;&gt;Complex Tashreef - Intra AUST Programming Contest, Spring 2020&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Staircases - Timus 1017</title>
       <link>https://st3inum.github.io/posts/timus-1017/</link>
@@ -337,144 +444,6 @@ After the sieve we will multiply $2$ with each number of divisor, because if $i$
 &lt;li&gt;&lt;a href=&#34;https://codeforces.com/blog/entry/71434&#34;&gt;Codeforces Editorial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://oeis.org/A096825&#34;&gt;OEIS A096825&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Testing Math</title>
-      <link>https://st3inum.github.io/posts/testing-math/</link>
-      <pubDate>Wed, 21 Apr 2021 03:53:08 +0600</pubDate>
-      
-      <guid>https://st3inum.github.io/posts/testing-math/</guid>
-      <description>$$x^5$$ hello world
-The following
-$f(n) = \begin{cases} n/2, \text{if $n$ is even} \newline 3n+1, \text{if $n$ is odd} \end{cases}$
-$\widetilde{d_t} = \begin{cases} d_t &amp;amp; if d_{t+1} \leq \dfrac{B}{2}\newline d_t+1 &amp;amp; if d_{t+1} &amp;gt; \dfrac{B}{2} \end{cases}$
-$$\int_{a}^{b} x^2 dx$$
-Is an integral This word is bold. This wordis italic.
- ! \begin{align} x &amp;amp;= 42 \end{align}
- Hint  click to hide   Hidden content     cpp Really cool snippet     var xmlHttp = new XMLHttpRequest(); xmlHttp.</description>
-      <content>&lt;p&gt;$$x^5$$
-hello world&lt;/p&gt;
-&lt;p&gt;The following&lt;/p&gt;
-&lt;p&gt;$f(n) = \begin{cases} n/2,   \text{if $n$ is even} \newline 3n+1,  \text{if $n$ is odd} \end{cases}$&lt;/p&gt;
-&lt;p&gt;$\widetilde{d_t} = \begin{cases} d_t &amp;amp; if d_{t+1} \leq \dfrac{B}{2}\newline d_t+1 &amp;amp; if d_{t+1} &amp;gt; \dfrac{B}{2} \end{cases}$&lt;/p&gt;
-&lt;p&gt;$$\int_{a}^{b} x^2 dx$$&lt;/p&gt;
-&lt;p&gt;Is an integral
-This &lt;strong&gt;word&lt;/strong&gt; is bold. This &lt;!-- raw HTML omitted --&gt;word&lt;!-- raw HTML omitted --&gt; is italic.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;! \begin{align} x &amp;amp;= 42 \end{align}&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-Hint
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-&lt;ul&gt;
-&lt;li&gt;Hidden&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;content&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-
-  &lt;div class=&#34;collapsable-code&#34;&gt;
-    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
-    &lt;label for=&#34;1&#34;&gt;
-      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__title&#34;&gt;Really cool snippet&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/cp\/master\/kmp.cpp&#39;, false ); 
-    xmlHttp.send( null );
-    var div = document.getElementById(&#39;code1&#39;);
-    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
-    
-    
-&lt;/script&gt;
-
-
-
-
-
-  &lt;div class=&#34;collapsable-code&#34;&gt;
-    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34;  /&gt;
-    &lt;label for=&#34;2&#34;&gt;
-      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__title&#34;&gt;Really cool snippet&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-  var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/cp\/master\/BIT.cpp&#39;, false ); 
-    xmlHttp.send( null );
-    var div = document.getElementById(&#39;code2&#39;);
-    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
-    
-    
-&lt;/script&gt;
-
-
-
-
-
-  &lt;div class=&#34;collapsable-code&#34;&gt;
-    &lt;input id=&#34;3&#34; type=&#34;checkbox&#34;  /&gt;
-    &lt;label for=&#34;3&#34;&gt;
-      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__title&#34;&gt;Really cool snippet&lt;/span&gt;
-      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code3&#34;&gt;
-
-#include &amp;lt;bits/stdc&amp;#43;&amp;#43;.h&amp;gt;
-using namespace std;
-
-#define ll long long
-#define endl &amp;#39;\n&amp;#39;
-
-
-int32_t main(){
-	ios_base::sync_with_stdio(0); cin.tie(0);
-
-	
-}
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-
-
-
 </content>
     </item>
     

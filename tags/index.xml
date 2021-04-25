@@ -6,7 +6,57 @@
     <description>Recent content in Tags on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 00:28:55 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 01:06:15 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>digit dp</title>
+      <link>https://st3inum.github.io/tags/digit-dp/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/digit-dp/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>divide and conquer</title>
+      <link>https://st3inum.github.io/tags/divide-and-conquer/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/divide-and-conquer/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>lucas theorem</title>
+      <link>https://st3inum.github.io/tags/lucas-theorem/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/lucas-theorem/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>number theory</title>
+      <link>https://st3inum.github.io/tags/number-theory/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/number-theory/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>toph</title>
+      <link>https://st3inum.github.io/tags/toph/</link>
+      <pubDate>Mon, 26 Apr 2021 01:06:15 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/toph/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>dp</title>
       <link>https://st3inum.github.io/tags/dp/</link>
@@ -38,16 +88,6 @@
     </item>
     
     <item>
-      <title>number theory</title>
-      <link>https://st3inum.github.io/tags/number-theory/</link>
-      <pubDate>Thu, 22 Apr 2021 10:03:45 +0600</pubDate>
-      
-      <guid>https://st3inum.github.io/tags/number-theory/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>segmented sieve</title>
       <link>https://st3inum.github.io/tags/segmented-sieve/</link>
       <pubDate>Thu, 22 Apr 2021 10:03:45 +0600</pubDate>
@@ -58,19 +98,9 @@
     </item>
     
     <item>
-      <title>harmonic lemma</title>
-      <link>https://st3inum.github.io/tags/harmonic-lemma/</link>
-      <pubDate>Thu, 22 Apr 2021 02:31:20 +0600</pubDate>
-      
-      <guid>https://st3inum.github.io/tags/harmonic-lemma/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>sieve</title>
       <link>https://st3inum.github.io/tags/sieve/</link>
-      <pubDate>Thu, 22 Apr 2021 02:31:20 +0600</pubDate>
+      <pubDate>Thu, 22 Apr 2021 10:03:45 +0600</pubDate>
       
       <guid>https://st3inum.github.io/tags/sieve/</guid>
       <description></description>
@@ -78,11 +108,11 @@
     </item>
     
     <item>
-      <title>toph</title>
-      <link>https://st3inum.github.io/tags/toph/</link>
+      <title>harmonic lemma</title>
+      <link>https://st3inum.github.io/tags/harmonic-lemma/</link>
       <pubDate>Thu, 22 Apr 2021 02:31:20 +0600</pubDate>
       
-      <guid>https://st3inum.github.io/tags/toph/</guid>
+      <guid>https://st3inum.github.io/tags/harmonic-lemma/</guid>
       <description></description>
       <content></content>
     </item>
