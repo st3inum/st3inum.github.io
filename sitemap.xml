@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/posts/toph-complex-tashreef/</loc>
+    <lastmod>2021-04-26T01:06:15+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/tags/digit-dp/</loc>
     <lastmod>2021-04-26T01:06:15+06:00</lastmod>
   </url><url>
@@ -24,9 +27,6 @@
     <lastmod>2021-04-26T01:06:15+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/toph/</loc>
-    <lastmod>2021-04-26T01:06:15+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/posts/toph-complex-tashreef/</loc>
     <lastmod>2021-04-26T01:06:15+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/dp/</loc>
@@ -74,13 +74,13 @@
     <loc>https://st3inum.github.io/tags/discrete-math/</loc>
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
+    <loc>https://st3inum.github.io/tags/math/</loc>
+    <lastmod>2021-04-21T03:26:08+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</loc>
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/introductory-problems/</loc>
-    <lastmod>2021-04-21T03:26:08+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/math/</loc>
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/categories/</loc>
