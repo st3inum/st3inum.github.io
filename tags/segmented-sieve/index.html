@@ -16,6 +16,9 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 <link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
 
@@ -158,7 +161,11 @@
 
         <div class="post-content">
           
-          find nod for each number in [l,r]
+          
+          In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&quot;.
+For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.
+After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$.
+          
           
         </div>
 

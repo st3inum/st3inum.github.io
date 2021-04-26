@@ -6,7 +6,9 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="find nod for each number in [l,r]" />
+<meta name="description" content="In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &amp;ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&amp;quot;.
+For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.
+After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$." />
 <meta name="keywords" content="sieve, nod" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://st3inum.github.io/posts/uva-294/" />
@@ -15,6 +17,9 @@
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 <link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
@@ -42,7 +47,9 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Divisors - UVA 294">
-<meta property="og:description" content="find nod for each number in [l,r]" />
+<meta property="og:description" content="In this problem we will run a segmented sieve for [l,r]. In sieve we will maintain &amp;ldquo;number of divisor of $n$ which is smaller or equal than $\sqrt{n}$&amp;quot;.
+For each, $i\in [1,\sqrt{r}]$ we will increase number of divisor of each multiple of $i$ in range $[max(l,i^2),r]$.
+After the sieve we will multiply $2$ with each number of divisor, because if $i$ is a divisor of $n$ such that $i\le \sqrt{n}$ , we will have another divisor $\frac{n}{i} \ge \sqrt{n}$." />
 <meta property="og:url" content="https://st3inum.github.io/posts/uva-294/" />
 <meta property="og:site_name" content="MathBugs" />
 
