@@ -14,12 +14,12 @@
       
       <guid>https://st3inum.github.io/posts/toph-complex-tashreef/</guid>
       <description>Statement: In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ , for given $L$ and $R$.
-Inside Math: From the lucas&amp;rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]
+Inside Math: From the lucas&#39; theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]
 Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ . Hence , our answer will be $S(R)-S(L-1)$</description>
       <content>&lt;h2 id=&#34;statement&#34;&gt;Statement:&lt;/h2&gt;
 &lt;p&gt;In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ , for given $L$ and $R$.&lt;/p&gt;
 &lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
-&lt;p&gt;From the lucas&amp;rsquo;s theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]&lt;/p&gt;
+&lt;p&gt;From the lucas&#39; theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]&lt;/p&gt;
 &lt;p&gt;Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ . Hence , our answer will be $S(R)-S(L-1)$&lt;/p&gt;
 &lt;p&gt;Now,
 \begin{align}
@@ -107,7 +107,7 @@ print the values of $f(0),f(1),f(2),&amp;hellip;f(10)&amp;hellip;$
 &lt;p&gt;To avoid &lt;strong&gt;TLE&lt;/strong&gt; precalculate all values of $S(2^{i} - 1)$ and return them in function $S(n)$ directly.&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/lucas-theorem/&#34;&gt;Lucas&amp;rsquo;s Theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/lucas-theorem/&#34;&gt;Lucas&#39; Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://oeis.org/A001316&#34;&gt;OEIS A001316&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://toph.co/p/complex-tashreef&#34;&gt;Complex Tashreef - Intra AUST Programming Contest, Spring 2020&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
