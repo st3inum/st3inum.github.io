@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/posts/uva-11029/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/math/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/uva/</loc>
+    <lastmod>2021-04-28T01:28:53+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/tags/codemarshal/</loc>
     <lastmod>2021-04-27T19:54:10+06:00</lastmod>
   </url><url>
@@ -14,22 +32,10 @@
     <loc>https://st3inum.github.io/posts/uva-13041/</loc>
     <lastmod>2021-04-27T19:54:10+06:00</lastmod>
   </url><url>
-    <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-04-27T19:54:10+06:00</lastmod>
-  </url><url>
     <loc>https://st3inum.github.io/tags/number-theory/</loc>
     <lastmod>2021-04-27T19:54:10+06:00</lastmod>
   </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-04-27T19:54:10+06:00</lastmod>
-  </url><url>
     <loc>https://st3inum.github.io/tags/series/</loc>
-    <lastmod>2021-04-27T19:54:10+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
-    <lastmod>2021-04-27T19:54:10+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/uva/</loc>
     <lastmod>2021-04-27T19:54:10+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/codeforces/</loc>
@@ -96,9 +102,6 @@
     <lastmod>2021-04-21T23:41:52+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/discrete-math/</loc>
-    <lastmod>2021-04-21T03:26:08+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/math/</loc>
     <lastmod>2021-04-21T03:26:08+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</loc>

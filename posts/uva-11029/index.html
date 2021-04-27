@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Leading and Trailing - UVA 11029 :: MathBugs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="For given $n$ and $m$ print the value LLL...TTT where LLL is the leading $3$ digits of $n^{m}$ and TTT is trailing $3$ digits of $n^{m}$.
+Inside Math: For TTT we just use modular arithmetic and find $n^{m} \text{ (mod 1000)}$
+Now, assume that , number of digit of $n^{m}$ is $x$. Hence LLL must be equals to $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$
+How to calculate this ? Solution of the problem  click to hide  \begin{align} \lfloor \frac{n^{m}}{10^{x-3}}\rfloor &amp;amp;= \lfloor 10^{log_{10}{(\frac{n^{m}}{10^{x-3}})}}\rfloor \newline &amp;amp;= \lfloor 10^{log_{10}{(n^{m})} - log_{10}{(10^{x-3})}}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3) \times log_{10}{(10)}}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3)}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor &#43; 1 -3)}\rfloor\newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor -2)}\rfloor\newline \end{align}    How to find x ?" />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://st3inum.github.io/posts/uva-11029/" />
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://st3inum.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://st3inum.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Leading and Trailing - UVA 11029">
+<meta property="og:description" content="For given $n$ and $m$ print the value LLL...TTT where LLL is the leading $3$ digits of $n^{m}$ and TTT is trailing $3$ digits of $n^{m}$.
+Inside Math: For TTT we just use modular arithmetic and find $n^{m} \text{ (mod 1000)}$
+Now, assume that , number of digit of $n^{m}$ is $x$. Hence LLL must be equals to $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$
+How to calculate this ? Solution of the problem  click to hide  \begin{align} \lfloor \frac{n^{m}}{10^{x-3}}\rfloor &amp;amp;= \lfloor 10^{log_{10}{(\frac{n^{m}}{10^{x-3}})}}\rfloor \newline &amp;amp;= \lfloor 10^{log_{10}{(n^{m})} - log_{10}{(10^{x-3})}}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3) \times log_{10}{(10)}}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3)}\rfloor \newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor &#43; 1 -3)}\rfloor\newline &amp;amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor -2)}\rfloor\newline \end{align}    How to find x ?" />
+<meta property="og:url" content="https://st3inum.github.io/posts/uva-11029/" />
+<meta property="og:site_name" content="MathBugs" />
+
+  <meta property="og:image" content="https://st3inum.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-04-28 01:28:53 &#43;0600 &#43;06" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container full headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    MathBugs
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Post</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Post</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://st3inum.github.io/posts/uva-11029/">Leading and Trailing - UVA 11029</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-04-28 
+      </span>
+    
+    
+    <span class="post-author">:: steinum</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://st3inum.github.io/tags/math/">math</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>For given $n$ and $m$ print the value <code>LLL...TTT</code> where <code>LLL</code> is the leading $3$ digits of $n^{m}$ and <code>TTT</code> is trailing $3$ digits of $n^{m}$.</p>
+<h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>For <code>TTT</code> we just use modular arithmetic and find $n^{m} \text{ (mod 1000)}$</p>
+<p>Now, assume that , number of digit of $n^{m}$ is $x$.
+Hence <code>LLL</code> must be equals to $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$</p>
+<p>How to calculate this ?
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+Solution of the problem
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
+\begin{align}
+\lfloor \frac{n^{m}}{10^{x-3}}\rfloor &amp;= \lfloor 10^{log_{10}{(\frac{n^{m}}{10^{x-3}})}}\rfloor \newline
+&amp;= \lfloor 10^{log_{10}{(n^{m})} - log_{10}{(10^{x-3})}}\rfloor \newline
+&amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3) \times log_{10}{(10)}}\rfloor \newline
+&amp;= \lfloor 10^{m \times log_{10}{(n)} - (x-3)}\rfloor \newline
+&amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor + 1 -3)}\rfloor\newline
+&amp;= \lfloor 10^{m \times log_{10}{(n)} - (\lfloor (m \times log_{10}{(n)})\rfloor -2)}\rfloor\newline
+\end{align}
+</div>
+</div>
+</div>
+</p>
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+How to find x ?
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
+\begin{align}
+10^{x-1} \le n^{m} &amp;&lt; 10^{x} \text{ [Number of digit in }10^{x-1}\text{ is equals to }x\text{ ]}\newline
+log_{10}{10^{x-1}} \le log_{10}{n^{m}} &amp;&lt; log_{10}{10^{x}} \newline
+x-1 \le m \times log_{10}{n} &amp;&lt; x \newline
+x &amp;\le m \times log_{10}{n} + 1 \newline
+\therefore\text{maximum possible integer value of }&amp;x\text{ is }\lfloor m \times log_{10}{n} + 1 \rfloor\text{ or }\lfloor m \times log_{10}{n} \rfloor +1
+\end{align}
+</div>
+</div>
+</div>
+
+
+
+
+  <div class="collapsable-code">
+    <input id="1" type="checkbox"  />
+    <label for="1">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">Leading and Trailing - uva 11029</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code1">
+</code></pre>
+  </div>
+
+
+<script type="text/javascript">
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/11029.cpp', false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById('code1');
+    div.textContent = '\n'+xmlHttp.responseText;
+    
+    
+</script>
+
+
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://st3inum.github.io/posts/uva-13041/">
+                <span class="button__text">Fraction and Sequence - UVA 13041</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://st3inum.github.io/assets/spoiler.js"></script>
+<script src="https://st3inum.github.io/assets/spoiler.css"></script>
+
+
+<script src="https://st3inum.github.io/assets/main.js"></script>
+
+<script src="https://st3inum.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
