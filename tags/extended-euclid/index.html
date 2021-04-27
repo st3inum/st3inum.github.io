@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>extended euclid :: MathBugs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://st3inum.github.io/tags/extended-euclid/" />
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://st3inum.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://st3inum.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="extended euclid">
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://st3inum.github.io/tags/extended-euclid/" />
+<meta property="og:site_name" content="MathBugs" />
+
+  
+    <meta property="og:image" content="https://st3inum.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+  <link href="/tags/extended-euclid/index.xml" rel="alternate" type="application/rss+xml" title="MathBugs" />
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container full headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    MathBugs
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Post</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Post</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  
+  <div class="posts">
+    
+      <div class="post on-list">
+        <h1 class="post-title">
+          <a href="https://st3inum.github.io/posts/uva-13041/">Fraction and Sequence - UVA 13041</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2021-04-27
+          </span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/diophantine-equation/">diophantine equation</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/extended-euclid/">extended euclid</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/series/">series</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/codemarshal/">codemarshal</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          How many triplet $(a,b,c)$ are there such that $0\le a,b,c \le L$ and $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = \frac{p}{q}$ , for given $p,q,L$.
+Inside Math: Suppose, $A = \sum_{x=0}^{\infty}{ax^2\times (\frac{1}{10})^{x+1}}$
+$B = \sum_{x=0}^{\infty}{bx\times (\frac{1}{10})^{x+1}}$
+$C = \sum_{x=0}^{\infty}{c\times (\frac{1}{10})^{x+1}}$
+Hence, $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = A+B+C$
+Now, we know(Actually we don&rsquo;t know this, we have to prove this. We&rsquo;ll try to prove this in some other section) that:
+$\sum_{x=0}^{\infty}{x^{2}r^{x+1}} = \frac{r^{2}(r+1)}{(r-1)^{3}} \tag{1}$
+$\sum_{x=0}^{\infty}{xr^{x+1}} = \frac{r^{2}}{(r-1)^{2}} \tag{2}$
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/posts/uva-13041/">Read more →</a>
+        </div>
+        
+      </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://st3inum.github.io/assets/spoiler.js"></script>
+<script src="https://st3inum.github.io/assets/spoiler.css"></script>
+
+
+<script src="https://st3inum.github.io/assets/main.js"></script>
+
+<script src="https://st3inum.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

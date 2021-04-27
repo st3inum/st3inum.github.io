@@ -6,13 +6,33 @@
     <description>Recent content in Tags on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Apr 2021 01:46:42 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 19:54:10 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>codeforces</title>
-      <link>https://st3inum.github.io/tags/codeforces/</link>
-      <pubDate>Tue, 27 Apr 2021 01:46:42 +0600</pubDate>
+      <title>codemarshal</title>
+      <link>https://st3inum.github.io/tags/codemarshal/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
       
-      <guid>https://st3inum.github.io/tags/codeforces/</guid>
+      <guid>https://st3inum.github.io/tags/codemarshal/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>diophantine equation</title>
+      <link>https://st3inum.github.io/tags/diophantine-equation/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/diophantine-equation/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>extended euclid</title>
+      <link>https://st3inum.github.io/tags/extended-euclid/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/extended-euclid/</guid>
       <description></description>
       <content></content>
     </item>
@@ -20,9 +40,39 @@
     <item>
       <title>number theory</title>
       <link>https://st3inum.github.io/tags/number-theory/</link>
-      <pubDate>Tue, 27 Apr 2021 01:46:42 +0600</pubDate>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
       
       <guid>https://st3inum.github.io/tags/number-theory/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>series</title>
+      <link>https://st3inum.github.io/tags/series/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/series/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>uva</title>
+      <link>https://st3inum.github.io/tags/uva/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/uva/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>codeforces</title>
+      <link>https://st3inum.github.io/tags/codeforces/</link>
+      <pubDate>Tue, 27 Apr 2021 01:46:42 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/tags/codeforces/</guid>
       <description></description>
       <content></content>
     </item>

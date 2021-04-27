@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uva on MathBugs</title>
+    <link>https://st3inum.github.io/tags/uva/</link>
+    <description>Recent content in uva on MathBugs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Apr 2021 19:54:10 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/uva/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fraction and Sequence - UVA 13041</title>
+      <link>https://st3inum.github.io/posts/uva-13041/</link>
+      <pubDate>Tue, 27 Apr 2021 19:54:10 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/uva-13041/</guid>
+      <description>How many triplet $(a,b,c)$ are there such that $0\le a,b,c \le L$ and $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = \frac{p}{q}$ , for given $p,q,L$.
+Inside Math: Suppose, $A = \sum_{x=0}^{\infty}{ax^2\times (\frac{1}{10})^{x+1}}$
+$B = \sum_{x=0}^{\infty}{bx\times (\frac{1}{10})^{x+1}}$
+$C = \sum_{x=0}^{\infty}{c\times (\frac{1}{10})^{x+1}}$
+Hence, $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = A+B+C$
+Now, we know(Actually we don&amp;rsquo;t know this, we have to prove this. We&amp;rsquo;ll try to prove this in some other section) that:
+$\sum_{x=0}^{\infty}{x^{2}r^{x+1}} = \frac{r^{2}(r+1)}{(r-1)^{3}} \tag{1}$
+$\sum_{x=0}^{\infty}{xr^{x+1}} = \frac{r^{2}}{(r-1)^{2}} \tag{2}$</description>
+      <content>&lt;p&gt;How many triplet $(a,b,c)$ are there such that $0\le a,b,c \le L$ and $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = \frac{p}{q}$ , for given $p,q,L$.&lt;/p&gt;
+&lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
+&lt;p&gt;Suppose,
+$A = \sum_{x=0}^{\infty}{ax^2\times (\frac{1}{10})^{x+1}}$&lt;/p&gt;
+&lt;p&gt;$B = \sum_{x=0}^{\infty}{bx\times (\frac{1}{10})^{x+1}}$&lt;/p&gt;
+&lt;p&gt;$C = \sum_{x=0}^{\infty}{c\times (\frac{1}{10})^{x+1}}$&lt;/p&gt;
+&lt;p&gt;Hence, $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = A+B+C$&lt;/p&gt;
+&lt;p&gt;Now, we know(Actually we don&amp;rsquo;t know this, we have to prove this. We&amp;rsquo;ll try to prove this in some other section) that:&lt;/p&gt;
+&lt;p&gt;$\sum_{x=0}^{\infty}{x^{2}r^{x+1}} = \frac{r^{2}(r+1)}{(r-1)^{3}} \tag{1}$&lt;/p&gt;
+&lt;p&gt;$\sum_{x=0}^{\infty}{xr^{x+1}} = \frac{r^{2}}{(r-1)^{2}} \tag{2}$&lt;/p&gt;
+&lt;p&gt;$\sum_{x=0}^{\infty}{r^{x+1}} = \frac{r}{(r-1)} \tag{3}$&lt;/p&gt;
+&lt;p&gt;from the above $(1)$, $(2)$ and $(3)$ we can easily find, $A = \frac{11}{3^{6}}$, $B = \frac{1}{3^{4}}$, $C = \frac{1}{3^{2}}$&lt;/p&gt;
+&lt;p&gt;Hence :
+\begin{align}
+\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} &amp;amp;= A+B+C \newline
+\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} &amp;amp;= a\times \frac{11}{3^{6}}+ b\times \frac{1}{3^{4}} + c\times \frac{1}{3^{2}} = \frac{p}{q} \newline
+\frac{11a+9b+81c}{3^{6}} &amp;amp;= \frac{p}{q} \newline
+11a+9b+81c &amp;amp;= \frac{p\times 3^{6} }{q} \newline
+11a+9b &amp;amp;= \frac{p\times 3^{6}}{q} - 81c = r \text{ [Here } q \text{ must be a divisor of }3^6\text{]} \newline
+\end{align}&lt;/p&gt;
+&lt;p&gt;Now , $11a+9b=r$ is a linear diophantine equation.&lt;/p&gt;
+&lt;p&gt;By solving this diophantine equation we will get: $a = 9x-4r$ and $b=5r-11x$ for any integer $x$.&lt;/p&gt;
+&lt;p&gt;Now ,
+\begin{align}
+0\le a \le L \newline
+0\le 9x-4r \le L \newline
+\frac{4r}{9} \le x \le \frac{L+4r}{9}
+\end{align}
+Hence , $x \in [\lceil \frac{4r}{9} \rceil , \lfloor \frac{L+4r}{9} \rfloor]$&lt;/p&gt;
+&lt;p&gt;Again ,
+\begin{align}
+0\le b \le L \newline
+0\le 5r-11x \le L \newline
+\frac{5r-L}{11} \le x \le \frac{5r}{11}
+\end{align}
+Hence , $x \in [\lceil \frac{5r-L}{11} \rceil , \lfloor \frac{5r}{11} \rfloor]$&lt;/p&gt;
+&lt;p&gt;Hence , actual value of $x$ will be in range $[\lceil \frac{4r}{9} \rceil , \lfloor \frac{L+4r}{9} \rfloor] \cap [\lceil \frac{5r-L}{11} \rceil , \lfloor \frac{5r}{11} \rfloor] = [max(\lceil \frac{4r}{9} \rceil , \lceil \frac{5r-L}{11} \rceil) , min(\lfloor \frac{L+4r}{9} \rfloor , \lfloor \frac{5r}{11} \rfloor)]$&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution:&lt;/h2&gt;
+&lt;p&gt;Now we will just iterate over $c \in [0,L]$ , then for each $r = \frac{p\times 3^{6}}{q} - 81c$ we will add $max(min(\lfloor \frac{L+4r}{9} \rfloor , \lfloor \frac{5r}{11} \rfloor) - max(\lceil \frac{4r}{9} \rceil , \lceil \frac{5r-L}{11} \rceil)+1, 0)$ to our answer.&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Fraction and Sequence&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/13041.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;p&gt;Actually, it is not a good solution, we can optimize it furthermore. But it will pass the problem.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinejudge.org/external/130/13041.pdf&#34;&gt;UVA - 13041&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://algo.codemarshal.org/contests/sustiupc2015/problems/H&#34;&gt;Fraction and Sequence : SUST IUPC 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Diophantine_equation&#34;&gt;Diophantine Equation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
