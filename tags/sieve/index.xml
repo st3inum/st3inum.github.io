@@ -6,7 +6,68 @@
     <description>Recent content in sieve on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 10:03:45 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/sieve/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 01:46:42 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/sieve/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primes or Palindromes? - Codeforces - 568a</title>
+      <link>https://st3inum.github.io/posts/codeforces-568a/</link>
+      <pubDate>Tue, 27 Apr 2021 01:46:42 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/codeforces-568a/</guid>
+      <description>$\pi(n) = \text{ number of prime number smaller than or equal to n}$ . $rub(n) = \text{ number of palindromic number smaller than or equal to n}$ .  For a given $p$ and $q$ find maximum such $n$ so that, $\pi(n)\le \frac{p}{q}\times rub(n)$
+Inside Math:  $\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation] $rub(n) \approx 2\sqrt{n}$ maximum value of $\frac{p}{q} = 42$  Hence , \begin{align} \pi(n) &amp;amp;\le \frac{p}{q}\times rub(n) \newline \Longrightarrow \frac{n}{ln(n)} &amp;amp;\le 42 \times 2\sqrt{n} \newline \Longrightarrow \frac{\sqrt{n}}{ln(n)} &amp;amp;\le 84 \newline \Longrightarrow n_{max} &amp;amp;\approx \boxed{1415344} \newline \end{align}</description>
+      <content>&lt;ul&gt;
+&lt;li&gt;$\pi(n) = \text{ number of prime number smaller than or equal to n}$ .&lt;/li&gt;
+&lt;li&gt;$rub(n) = \text{ number of palindromic number smaller than or equal to n}$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a given $p$ and $q$ find maximum such $n$ so that, $\pi(n)\le \frac{p}{q}\times rub(n)$&lt;/p&gt;
+&lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation]&lt;/li&gt;
+&lt;li&gt;$rub(n) \approx 2\sqrt{n}$&lt;/li&gt;
+&lt;li&gt;maximum value of $\frac{p}{q} = 42$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence ,
+\begin{align}
+\pi(n) &amp;amp;\le \frac{p}{q}\times rub(n) \newline
+\Longrightarrow \frac{n}{ln(n)} &amp;amp;\le 42 \times 2\sqrt{n} \newline
+\Longrightarrow \frac{\sqrt{n}}{ln(n)} &amp;amp;\le 84 \newline
+\Longrightarrow n_{max} &amp;amp;\approx \boxed{1415344} \newline
+\end{align}&lt;/p&gt;
+&lt;p&gt;Now we can just precalculate all prime,and the palindrome in the range $[0,n_{max}]$, then find out maximum such $n$ for which $\pi(n) \le \frac{p}{q}\times rub(n)$.&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Primes or Palindromes?&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/568a.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeforces.com/contest/568/problem/A&#34;&gt;Codeforces - 568A&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mathworld.wolfram.com/PrimeCountingFunction.html&#34;&gt;Prime number approximation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Divisors - UVA 294</title>
       <link>https://st3inum.github.io/posts/uva-294/</link>

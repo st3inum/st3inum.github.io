@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Primes or Palindromes? - Codeforces - 568a :: MathBugs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="$\pi(n) = \text{ number of prime number smaller than or equal to n}$ . $rub(n) = \text{ number of palindromic number smaller than or equal to n}$ .  For a given $p$ and $q$ find maximum such $n$ so that, $\pi(n)\le \frac{p}{q}\times rub(n)$
+Inside Math:  $\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation] $rub(n) \approx 2\sqrt{n}$ maximum value of $\frac{p}{q} = 42$  Hence , \begin{align} \pi(n) &amp;amp;\le \frac{p}{q}\times rub(n) \newline \Longrightarrow \frac{n}{ln(n)} &amp;amp;\le 42 \times 2\sqrt{n} \newline \Longrightarrow \frac{\sqrt{n}}{ln(n)} &amp;amp;\le 84 \newline \Longrightarrow n_{max} &amp;amp;\approx \boxed{1415344} \newline \end{align}" />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://st3inum.github.io/posts/codeforces-568a/" />
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://st3inum.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://st3inum.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Primes or Palindromes? - Codeforces - 568a">
+<meta property="og:description" content="$\pi(n) = \text{ number of prime number smaller than or equal to n}$ . $rub(n) = \text{ number of palindromic number smaller than or equal to n}$ .  For a given $p$ and $q$ find maximum such $n$ so that, $\pi(n)\le \frac{p}{q}\times rub(n)$
+Inside Math:  $\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation] $rub(n) \approx 2\sqrt{n}$ maximum value of $\frac{p}{q} = 42$  Hence , \begin{align} \pi(n) &amp;amp;\le \frac{p}{q}\times rub(n) \newline \Longrightarrow \frac{n}{ln(n)} &amp;amp;\le 42 \times 2\sqrt{n} \newline \Longrightarrow \frac{\sqrt{n}}{ln(n)} &amp;amp;\le 84 \newline \Longrightarrow n_{max} &amp;amp;\approx \boxed{1415344} \newline \end{align}" />
+<meta property="og:url" content="https://st3inum.github.io/posts/codeforces-568a/" />
+<meta property="og:site_name" content="MathBugs" />
+
+  <meta property="og:image" content="https://st3inum.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-04-27 01:46:42 &#43;0600 &#43;06" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container full headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    MathBugs
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Post</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Post</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://st3inum.github.io/posts/codeforces-568a/">Primes or Palindromes? - Codeforces - 568a</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-04-27 
+      </span>
+    
+    
+    <span class="post-author">:: steinum</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/sieve/">sieve</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/codeforces/">codeforces</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <ul>
+<li>$\pi(n) = \text{ number of prime number smaller than or equal to n}$ .</li>
+<li>$rub(n) = \text{ number of palindromic number smaller than or equal to n}$ .</li>
+</ul>
+<p>For a given $p$ and $q$ find maximum such $n$ so that, $\pi(n)\le \frac{p}{q}\times rub(n)$</p>
+<h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>$\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation]</li>
+<li>$rub(n) \approx 2\sqrt{n}$</li>
+<li>maximum value of $\frac{p}{q} = 42$</li>
+</ul>
+<p>Hence ,
+\begin{align}
+\pi(n) &amp;\le \frac{p}{q}\times rub(n) \newline
+\Longrightarrow \frac{n}{ln(n)} &amp;\le 42 \times 2\sqrt{n} \newline
+\Longrightarrow \frac{\sqrt{n}}{ln(n)} &amp;\le 84 \newline
+\Longrightarrow n_{max} &amp;\approx \boxed{1415344} \newline
+\end{align}</p>
+<p>Now we can just precalculate all prime,and the palindrome in the range $[0,n_{max}]$, then find out maximum such $n$ for which $\pi(n) \le \frac{p}{q}\times rub(n)$.</p>
+
+
+
+  <div class="collapsable-code">
+    <input id="1" type="checkbox"  />
+    <label for="1">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">Primes or Palindromes?</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code1">
+</code></pre>
+  </div>
+
+
+<script type="text/javascript">
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/568a.cpp', false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById('code1');
+    div.textContent = '\n'+xmlHttp.responseText;
+    
+    
+</script>
+
+
+<h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="https://codeforces.com/contest/568/problem/A">Codeforces - 568A</a></li>
+<li><a href="https://mathworld.wolfram.com/PrimeCountingFunction.html">Prime number approximation</a></li>
+</ul>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://st3inum.github.io/posts/toph-complex-tashreef/">
+                <span class="button__text">Complex Tashreef - Toph</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://st3inum.github.io/assets/spoiler.js"></script>
+<script src="https://st3inum.github.io/assets/spoiler.css"></script>
+
+
+<script src="https://st3inum.github.io/assets/main.js"></script>
+
+<script src="https://st3inum.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
