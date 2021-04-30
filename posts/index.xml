@@ -133,7 +133,26 @@ click to hide
 &lt;li&gt;$1\le n,k \le 10^{18}$&lt;/li&gt;
 &lt;li&gt;$2 \le m \le 10^{6}$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+Hint
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+Comming Soon&amp;hellip;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
 
 
 
