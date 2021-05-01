@@ -101,7 +101,7 @@ click to hide
 &lt;li&gt;$1\le n,k \le 10^{18}$&lt;/li&gt;
 &lt;li&gt;$2 \le m \le 10^{6}$ and $m$ is a prime number.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this case we can calculate the value of ncr with lucas theorem.&lt;/p&gt;
+&lt;p&gt;In this case we can calculate the value of $\binom{n}{r}$ with lucas theorem.&lt;/p&gt;
 
 
 
@@ -133,26 +133,21 @@ click to hide
 &lt;li&gt;$1\le n,k \le 10^{18}$&lt;/li&gt;
 &lt;li&gt;$2 \le m \le 10^{6}$&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-Hint
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-Comming Soon&amp;hellip;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
+&lt;p&gt;In this case, at first, we will calculate $\binom{n}{r}$ modulo prime power. Then merge them up with &lt;code&gt;CRT&lt;/code&gt; and get the value of $\binom{n}{r}$ modulo an arbitrary number.&lt;/p&gt;
+&lt;p&gt;To calculate $\binom{n}{r}$ (mod $p^{k}$) [$p$ is a prime number and $k&amp;gt;0$], we will calculate $n!$ (mod $p^{k}$) , but ignoring all occurrences of $p$.&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s define some function/variables.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$F_{n} = \prod_{i = 1 , p\nmid i}^{n}{i}$ (mod $p^{k}$)&lt;/li&gt;
+&lt;li&gt;$L(n) = $ max $k$ such that $p^k \mid n!$ [with Legendre&amp;rsquo;s Formula]&lt;/li&gt;
+&lt;li&gt;$f(n)$ = $\frac{n!}{p^{L(n)}}$ (mod $p^{k}$)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;calculate-ln&#34;&gt;Calculate $L(n)$:&lt;/h3&gt;
+&lt;p&gt;$L(n) = \sum_{i=1}^{\infty}{\lfloor \frac{n}{p^{i}} \rfloor}$ [known as Legendre&amp;rsquo;s Formula]&lt;/p&gt;
+&lt;h3 id=&#34;calculate-fn&#34;&gt;Calculate $f(n)$:&lt;/h3&gt;
+&lt;p&gt;$ f(n) = \begin{cases} 1 \text{ , if $n=0$} \newline F_{p^{e}}^{\lfloor \frac{n}{p^e} \rfloor} \times F_{n \text{ (mod $p^e$)}} \times f(\lfloor \frac{n}{p} \rfloor) \text{ , if $n \neq 0$} \end{cases}$&lt;/p&gt;
+&lt;h3 id=&#34;calculate-binomnr&#34;&gt;Calculate $\binom{n}{r}$:&lt;/h3&gt;
+&lt;p&gt;$\binom{n}{r} = \frac{f(n)}{f(r)\times f(n-r)} \times p^{L(n)-L(r)-L(n-r)}$&lt;/p&gt;
+&lt;p&gt;Now, the remaining part is to merge all answer from $p^k$ [$p^k\mid m$ and $p^{k+1}\nmid m$] with &lt;code&gt;CRT&lt;/code&gt; .&lt;/p&gt;
 
 
 
@@ -185,7 +180,8 @@ Comming Soon&amp;hellip;
 &lt;li&gt;&lt;a href=&#34;https://forthright48.com/stars-and-bars-theorem&#34;&gt;Stars and Bars Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forthright48.com/chinese-remainder-theorem-part-1-coprime-moduli/&#34;&gt;CRT - Chinese Remainder Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/lucas-theorem/&#34;&gt;Lucas&amp;rsquo; Theorem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Wilson%27s_theorem&#34;&gt;Wilson&amp;rsquo;s theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Legendre%27s_formula&#34;&gt;Legendre&amp;rsquo;s Formula&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cp-algorithms.com/combinatorics/binomial-coefficients.html&#34;&gt;Emaxx : Binomial Coefficients&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>

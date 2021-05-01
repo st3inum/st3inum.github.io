@@ -156,7 +156,9 @@ Answer of the first part  click to hide  $a = \lceil \frac{n}{k} \rceil$    The 
     
     #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/wilsons-theorem/">wilson&#39;s theorem</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/legendres-formula/">legendre&#39;s formula</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/counting/">counting</a>&nbsp;
     
     #<a href="https://st3inum.github.io/tags/codechef/">codechef</a>&nbsp;
     
@@ -253,7 +255,7 @@ click to hide
 <li>$1\le n,k \le 10^{18}$</li>
 <li>$2 \le m \le 10^{6}$ and $m$ is a prime number.</li>
 </ul>
-<p>In this case we can calculate the value of ncr with lucas theorem.</p>
+<p>In this case we can calculate the value of $\binom{n}{r}$ with lucas theorem.</p>
 
 
 
@@ -285,26 +287,21 @@ click to hide
 <li>$1\le n,k \le 10^{18}$</li>
 <li>$2 \le m \le 10^{6}$</li>
 </ul>
-
-<div class="spoiler panel panel-default">
-<div class='spoiler_block'>
-      
-        
-      
-<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
-Hint
-</a>
-
-<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
-click to hide
-</a>
-
-<div class='spoiler_block_content' style='display: none;'>
-Comming Soon&hellip;
-</div>
-</div>
-</div>
-
+<p>In this case, at first, we will calculate $\binom{n}{r}$ modulo prime power. Then merge them up with <code>CRT</code> and get the value of $\binom{n}{r}$ modulo an arbitrary number.</p>
+<p>To calculate $\binom{n}{r}$ (mod $p^{k}$) [$p$ is a prime number and $k&gt;0$], we will calculate $n!$ (mod $p^{k}$) , but ignoring all occurrences of $p$.</p>
+<p>Now let&rsquo;s define some function/variables.</p>
+<ul>
+<li>$F_{n} = \prod_{i = 1 , p\nmid i}^{n}{i}$ (mod $p^{k}$)</li>
+<li>$L(n) = $ max $k$ such that $p^k \mid n!$ [with Legendre&rsquo;s Formula]</li>
+<li>$f(n)$ = $\frac{n!}{p^{L(n)}}$ (mod $p^{k}$)</li>
+</ul>
+<h3 id="calculate-ln">Calculate $L(n)$:<a href="#calculate-ln" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>$L(n) = \sum_{i=1}^{\infty}{\lfloor \frac{n}{p^{i}} \rfloor}$ [known as Legendre&rsquo;s Formula]</p>
+<h3 id="calculate-fn">Calculate $f(n)$:<a href="#calculate-fn" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>$ f(n) = \begin{cases} 1 \text{ , if $n=0$} \newline F_{p^{e}}^{\lfloor \frac{n}{p^e} \rfloor} \times F_{n \text{ (mod $p^e$)}} \times f(\lfloor \frac{n}{p} \rfloor) \text{ , if $n \neq 0$} \end{cases}$</p>
+<h3 id="calculate-binomnr">Calculate $\binom{n}{r}$:<a href="#calculate-binomnr" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>$\binom{n}{r} = \frac{f(n)}{f(r)\times f(n-r)} \times p^{L(n)-L(r)-L(n-r)}$</p>
+<p>Now, the remaining part is to merge all answer from $p^k$ [$p^k\mid m$ and $p^{k+1}\nmid m$] with <code>CRT</code> .</p>
 
 
 
@@ -337,7 +334,8 @@ Comming Soon&hellip;
 <li><a href="https://forthright48.com/stars-and-bars-theorem">Stars and Bars Theorem</a></li>
 <li><a href="https://forthright48.com/chinese-remainder-theorem-part-1-coprime-moduli/">CRT - Chinese Remainder Theorem</a></li>
 <li><a href="https://brilliant.org/wiki/lucas-theorem/">Lucas&rsquo; Theorem</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Wilson%27s_theorem">Wilson&rsquo;s theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Legendre%27s_formula">Legendre&rsquo;s Formula</a></li>
+<li><a href="https://cp-algorithms.com/combinatorics/binomial-coefficients.html">Emaxx : Binomial Coefficients</a></li>
 </ul>
 
       </div></div>

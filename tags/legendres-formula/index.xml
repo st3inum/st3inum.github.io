@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>combinatorics on MathBugs</title>
-    <link>https://st3inum.github.io/tags/combinatorics/</link>
-    <description>Recent content in combinatorics on MathBugs</description>
+    <title>legendre&#39;s formula on MathBugs</title>
+    <link>https://st3inum.github.io/tags/legendres-formula/</link>
+    <description>Recent content in legendre&#39;s formula on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Apr 2021 22:03:31 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Apr 2021 22:03:31 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/legendres-formula/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Long Sandwich - Codechef SANDWICH</title>
       <link>https://st3inum.github.io/posts/codechef-sandwich/</link>
