@@ -174,6 +174,7 @@ click to hide
 &lt;/script&gt;
 
 
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.codechef.com/problems/SANDWICH&#34;&gt;Codechef - SANDWICH&lt;/a&gt;&lt;/li&gt;
@@ -828,9 +829,38 @@ After the sieve we will multiply $2$ with each number of divisor, because if $i$
 &lt;/script&gt;
 
 
+&lt;h2 id=&#34;spoj---afs2&#34;&gt;SPOJ - AFS2&lt;/h2&gt;
+&lt;p&gt;Pretty much same problem.
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34; checked /&gt;
+    &lt;label for=&#34;2&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;AFS2&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/spoj\/AFS2.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code2&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://toph.co/p/prime-factor-love&#34;&gt;Toph - Prime Factor Love&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.spoj.com/problems/AFS2/en/&#34;&gt;SPOJ - AFS2 - Amazing Factor Sequence (medium)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://codeforces.com/blog/entry/53925&#34;&gt;Harmonic Lemma&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -874,226 +904,6 @@ After the sieve we will multiply $2$ with each number of divisor, because if $i$
 &lt;li&gt;&lt;a href=&#34;https://codeforces.com/contest/1257/problem/G&#34;&gt;Codeforces - 1257G&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://codeforces.com/blog/entry/71434&#34;&gt;Codeforces Editorial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://oeis.org/A096825&#34;&gt;OEIS A096825&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Modular Arithmetic: Introduction</title>
-      <link>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</link>
-      <pubDate>Wed, 21 Apr 2021 03:26:08 +0600</pubDate>
-      
-      <guid>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</guid>
-      <description>মডুলার অ্যারিথমেটিক নিয়ে পড়ার আগে আমরা কিছু জিনিস রিক্যাপ করে নেই , যেগুলা আমরা ক্লাস ফাইভে পড়ে এসেছি ।
-ভাজ্য = ভাজক × ভাগফল + ভাগশেষ বা, Dividend = Divisor × Quotient + Remainder
-অনেকের যদি কোনটা কি জিনিস মনে না থাকে তাহলে পুরানো বইয়ের পাতা উলটে দেখতে পার , আর গুগল মামা তো আছেই ।
-এবার অনেকর মনে প্রশ্ন আসবে , অমুক প্রবলেম তো সহজেই পাটিগণিত / সাধারণ নিয়মে সল্ভ করে ফেলা যায় , তাহলে এসব ম্যাথ করার জন্য মডুলার অ্যারিথমেটিক কেন শিখবো?</description>
-      <content>&lt;p&gt;মডুলার অ্যারিথমেটিক নিয়ে পড়ার আগে আমরা কিছু জিনিস রিক্যাপ করে নেই , যেগুলা আমরা ক্লাস ফাইভে পড়ে এসেছি ।&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ভাজ্য = ভাজক × ভাগফল + ভাগশেষ&lt;/code&gt; বা, &lt;code&gt;Dividend = Divisor × Quotient + Remainder&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;অনেকের যদি কোনটা কি জিনিস মনে না থাকে তাহলে পুরানো বইয়ের পাতা উলটে দেখতে পার , আর &lt;a href=&#34;google.com&#34;&gt;গুগল&lt;/a&gt; মামা তো আছেই ।&lt;/p&gt;
-&lt;p&gt;এবার অনেকর মনে প্রশ্ন আসবে , অমুক প্রবলেম তো সহজেই পাটিগণিত / সাধারণ নিয়মে সল্ভ করে  ফেলা যায় , তাহলে এসব ম্যাথ করার জন্য মডুলার অ্যারিথমেটিক কেন শিখবো? তার উপর এটা তো একটা কঠিন টপিক ।&lt;/p&gt;
-&lt;p&gt;তাদের জন্য বলে রাখা, মডুলার অ্যারিথমেটিক হল এসব সাধারণ নিয়মগুলোর একটা কম্প্যাক্ট ফর্ম । তাই এভাবে করলে সহজেই অনেক প্রবলেম সল্ভ করে ফেলা যায় । যেগুলো কিনা সাধারণ ভাবে করলে অনেক বড় হয়ে যেত ।  আর সত্যি কথা বলতে মানুষকে কোন ম্যাথের সলিউশন বুঝাতে গেলে বেশি লেখা দেখলে ভয় পেয়ে যায়। কিন্তু মডুলার অ্যারিথমেটিক দিয়ে সল্ভ করলে কয়েক লাইনে হয়ে যায় বলে তারা ভয় পায় না। (just kidding :v​ )&lt;/p&gt;
-&lt;h2 id=&#34;definition&#34;&gt;Definition:&lt;/h2&gt;
-&lt;p&gt;আমরা অনেক সময় দেখে থাকি $a \text{ (mod b)}$ । এর মানে কি? সহজ করে বলতে গেলে এর মানে হল &lt;code&gt;a&lt;/code&gt; কে &lt;code&gt;b&lt;/code&gt; দিয়ে ভাগ করলে যেই ভাগশেষ থাকবে সেই সংখ্যাটা ।  উদাহরণস্বরূপ $5 \text{ (mod 3)}=2$&lt;/p&gt;
-&lt;p&gt;এখানে &lt;code&gt;mod&lt;/code&gt; সাইনটা আসলে &lt;code&gt;modulo(মডুলো)&lt;/code&gt; শব্দের সংক্ষিপ্ত রূপ ।&lt;/p&gt;
-&lt;p&gt;আমরা আবার অনেকসময় দেখে থাকি $a\equiv b \text{ (mod m)}$ এর মানেই বা কি?&lt;/p&gt;
-&lt;p&gt;কখনো যদি $a \text{ (mod m)}=b \text{ (mod m)}$ হয় , তখন আমরা সংক্ষেপে লিখতে পারি $a\equiv b \text{ (mod m)}$ । এবং এটাকে পড়তে হয় &lt;code&gt;&amp;quot;a is congruent to b modulo m&amp;quot;&lt;/code&gt; এভাবে ।&lt;/p&gt;
-&lt;p&gt;এটাকে আমরা আরও একভাবে সংজ্ঞায়িত করতে পারি , যদি $(a-b)$ , $m$ দিয়ে নিঃশেষে ভাগ যায়, তাহলে আমরা লিখতে পারি $a\equiv b \text{ (mod m)}$ ।&lt;/p&gt;
-&lt;p&gt;আসলে দুইটা সংজ্ঞাই একই , একটু চিন্তা করলে বুঝতে পারবা।&lt;/p&gt;
-&lt;h2 id=&#34;properties&#34;&gt;Properties:&lt;/h2&gt;
-&lt;p&gt;আমরা কোন সমীকরণের দুইপাশে যেমন একই সংখ্যা দিয়ে যোগ , বিয়োগ, গুন  করতে পারি ঠিক তেমনি আমরা মডুলার অ্যারিথমেটিকেও উভয় দিকে একই সংখ্যা দিয়ে যোগ বিয়োগ গুন করতে পারি । [ &lt;em&gt;&lt;strong&gt;বিদ্রঃ উভয় দিকে একই সংখ্যা দিয়ে ভাগ করতে পারি না ।&lt;/strong&gt;&lt;/em&gt; ]&lt;/p&gt;
-&lt;p&gt;যেমন আমাদের রাশিটি যদি হয় $a\equiv b \text{ (mod m)}$ তাহলে কোন পূর্নসংখ্যা $k$ এর জন্য আমরা লিখতে পারি&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$a +k\equiv b+k \text{ (mod m)}$
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-.
-$a\equiv b \text{ (mod m)}$ হলে আমি বলতে পারি $a-b=mp$
-যেখানে &lt;code&gt;p&lt;/code&gt; হল $(a-b)$ কে &lt;code&gt;m&lt;/code&gt; দিয়ে ভাগ করলে যেই ভাগফল থাকবে সেইটা ( ২য় সংজ্ঞা দিয়ে চিন্তা কর)
-এখন ,
-$a-b=mp$
-= $(a+k)-(b+k)=mp$
-তারমানে বলতে পারি , $a +k\equiv b+k \text{ (mod m)}$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$a-k\equiv b-k \text{ (mod m)}$
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-&lt;pre&gt;&lt;code&gt;নিজে চেষ্টা কর।
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$a\times k\equiv b\times k \text{ (mod m)}$
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-&lt;pre&gt;&lt;code&gt;নিজে চেষ্টা কর।
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;আরও কিছু বৈশিষ্ট্য &amp;hellip;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a+p \equiv b+q \text{ (mod m)}$&lt;/li&gt;
-&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a-p \equiv b-q \text{ (mod m)}$&lt;/li&gt;
-&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a\times p \equiv b\times q \text{ (mod m)}$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;residue-class&#34;&gt;Residue class:&lt;/h2&gt;
-&lt;p&gt;কোন ধনাত্মক পূর্নসংখ্যা , $n$ দিয়ে অন্য যেকোনো পূর্নসংখ্যাকে ভাগ করলে ভাগশেষের সম্ভাব্য সকল সংখ্যাকে নিয়ে যে সেট হয় , তাকে &lt;a href=&#34;https://artofproblemsolving.com/wiki/index.php/Residue_class&#34;&gt;রেসিডিউ ক্লাস&lt;/a&gt; বলে ।  সহজ ভাবে বললে , কোন পূর্ন সংখ্যা , $n$ দিয়ে অন্য যেকোনো পূর্নসংখ্যাকে ভাগ করি না কেন , ভাগশেষ অবশ্যই $0$ থেকে $n-1$ এর মধ্যে হবে ( $0$ এবং $n-1$ সহ ) । যেমনঃ $5$ দিয়ে কোন সংখ্যাকে ভাগ করলে ভাগশেষ হতে পারে ${0,1,2,3,4}$ । তাই $5$ এর রেসিডিউ ক্লাস হল ${0,1,2,3,4}$ ।&lt;/p&gt;
-&lt;h2 id=&#34;divisibility-rule&#34;&gt;Divisibility Rule:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$2$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;
-কোন সংখ্যার শেষ অংকটি যদি $2$ দিয়ে ভাগ যায় , অর্থাৎ $0,2,4,6,8$ এর মধ্যে যেকোনোটা হয় । তাহলে সংখ্যাটি $2$ দিয়ে বিভাজ্য ।
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-.
-মনে করি সংখ্যাটি $n=10x+p$ । অর্থাৎ এর শেষ অংকটি হল $p$ ।
-তাহলে আমরা বলতে পারি ,
-$n\equiv 10x+p \text{ (mod 2)}$
-$\Longrightarrow n\equiv 0+p \text{ (mod 2)}$
-$\Longrightarrow \boxed{n\equiv p \text{ (mod 2)}}$
-অর্থাৎ $p$ ( শেষ অংক) কে $2$ দিয়ে ভাগ করলে যেই ভাগশেষ থাকবে , $n$ কে $2$ দিয়ে ভাগ করলেও একই ভাগশেষ থাকবে ।
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$3$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;কোন সংখ্যার অংকগুলোর যোগফল যদি $3$ দিয়ে ভাগ যায়, তাহলে সংখ্যাটিও $3$ দিয়ে ভাগ যাবে ।
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-&lt;p&gt;.
-মনে করি সংখ্যাটি  $n=d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}$&lt;/p&gt;
-&lt;p&gt;সংক্ষেপে বললে , $n=\sum_{i=0}^{k-1}{10^{i}d_{i}}$
-এখানে $n$ হল $k$ অংকের একটি সংখ্যা , এবং এর অংকগুলো হল , $d_{0},d_{1},d_{2},&amp;hellip;,d_{k-1}$। যেখানে $d_{0}$ হল একক স্থানীয় অংক, $d_{1}$ হল দশক স্থানীয় অংক , &amp;hellip; ।
-এখন , $10^p\equiv10\times 10 \times &amp;hellip; \times 10 \text{ (mod 3)}$ [মোট $p$ সংখ্যক $10$]
-$\Longrightarrow 10^{p}\equiv 1\times 1\times 1 \times &amp;hellip; \times 1 \text{ (mod 3)} \equiv 1 \text{ (mod 3)}$&lt;/p&gt;
-&lt;p&gt;অর্থাৎ , $n\equiv d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}\text{ (mod 3)}$
-$\Longrightarrow \boxed{n\equiv d_{0}+d_{1}+d_{2}+&amp;hellip;+10d_{k-1} \text{ (mod 3)}}$&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$4$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;কোন সংখ্যার শেষ দুই অংক নিয়ে গঠিত সংখ্যা যদি $4$ দিয়ে ভাগ যায়, তাহলে সংখ্যাটিও $4$ দিয়ে ভাগ যাবে ।
-
-&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
-&lt;div class=&#39;spoiler_block&#39;&gt;
-      
-        
-      
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
-proof
-&lt;/a&gt;
-
-&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
-click to hide
-&lt;/a&gt;
-
-&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
-.
-মনে করি সংখ্যাটি  $n=d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}$
-$\Longrightarrow n\equiv d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}\text{ (mod 4)}$
-$\Longrightarrow \boxed{n\equiv d_{0}+10d_{1}\text{ (mod 4)}}$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&amp;hellip;চলবে&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/modular-arithmetic/&#34;&gt;Brilliant Wiki&lt;/a&gt; (আমি যখন ব্রিলিয়ান্ট উইকি খুললাম তখন অবাক হয়ে গেলাম এটা দেখে যে সংজ্ঞার অংশ দুই জায়গায় ই একই :v )&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Modulo_operation&#34;&gt;মডুলো অপারেশন - উইকিপিডিয়া&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Divisibility_rule&#34;&gt;Divisibility rule from wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/modular-arithmetic-misconceptions/&#34;&gt;Some Misconception about modulo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>
@@ -1504,6 +1314,226 @@ int main() {
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://matholympiad.org.bd/resources/all-questions&#34;&gt;BDMO questions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Modular Arithmetic: Introduction</title>
+      <link>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</link>
+      <pubDate>Tue, 20 Apr 2021 03:26:08 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/intro-to-modular-arithmetic/</guid>
+      <description>মডুলার অ্যারিথমেটিক নিয়ে পড়ার আগে আমরা কিছু জিনিস রিক্যাপ করে নেই , যেগুলা আমরা ক্লাস ফাইভে পড়ে এসেছি ।
+ভাজ্য = ভাজক × ভাগফল + ভাগশেষ বা, Dividend = Divisor × Quotient + Remainder
+অনেকের যদি কোনটা কি জিনিস মনে না থাকে তাহলে পুরানো বইয়ের পাতা উলটে দেখতে পার , আর গুগল মামা তো আছেই ।
+এবার অনেকর মনে প্রশ্ন আসবে , অমুক প্রবলেম তো সহজেই পাটিগণিত / সাধারণ নিয়মে সল্ভ করে ফেলা যায় , তাহলে এসব ম্যাথ করার জন্য মডুলার অ্যারিথমেটিক কেন শিখবো?</description>
+      <content>&lt;p&gt;মডুলার অ্যারিথমেটিক নিয়ে পড়ার আগে আমরা কিছু জিনিস রিক্যাপ করে নেই , যেগুলা আমরা ক্লাস ফাইভে পড়ে এসেছি ।&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ভাজ্য = ভাজক × ভাগফল + ভাগশেষ&lt;/code&gt; বা, &lt;code&gt;Dividend = Divisor × Quotient + Remainder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;অনেকের যদি কোনটা কি জিনিস মনে না থাকে তাহলে পুরানো বইয়ের পাতা উলটে দেখতে পার , আর &lt;a href=&#34;google.com&#34;&gt;গুগল&lt;/a&gt; মামা তো আছেই ।&lt;/p&gt;
+&lt;p&gt;এবার অনেকর মনে প্রশ্ন আসবে , অমুক প্রবলেম তো সহজেই পাটিগণিত / সাধারণ নিয়মে সল্ভ করে  ফেলা যায় , তাহলে এসব ম্যাথ করার জন্য মডুলার অ্যারিথমেটিক কেন শিখবো? তার উপর এটা তো একটা কঠিন টপিক ।&lt;/p&gt;
+&lt;p&gt;তাদের জন্য বলে রাখা, মডুলার অ্যারিথমেটিক হল এসব সাধারণ নিয়মগুলোর একটা কম্প্যাক্ট ফর্ম । তাই এভাবে করলে সহজেই অনেক প্রবলেম সল্ভ করে ফেলা যায় । যেগুলো কিনা সাধারণ ভাবে করলে অনেক বড় হয়ে যেত ।  আর সত্যি কথা বলতে মানুষকে কোন ম্যাথের সলিউশন বুঝাতে গেলে বেশি লেখা দেখলে ভয় পেয়ে যায়। কিন্তু মডুলার অ্যারিথমেটিক দিয়ে সল্ভ করলে কয়েক লাইনে হয়ে যায় বলে তারা ভয় পায় না। (just kidding :v​ )&lt;/p&gt;
+&lt;h2 id=&#34;definition&#34;&gt;Definition:&lt;/h2&gt;
+&lt;p&gt;আমরা অনেক সময় দেখে থাকি $a \text{ (mod b)}$ । এর মানে কি? সহজ করে বলতে গেলে এর মানে হল &lt;code&gt;a&lt;/code&gt; কে &lt;code&gt;b&lt;/code&gt; দিয়ে ভাগ করলে যেই ভাগশেষ থাকবে সেই সংখ্যাটা ।  উদাহরণস্বরূপ $5 \text{ (mod 3)}=2$&lt;/p&gt;
+&lt;p&gt;এখানে &lt;code&gt;mod&lt;/code&gt; সাইনটা আসলে &lt;code&gt;modulo(মডুলো)&lt;/code&gt; শব্দের সংক্ষিপ্ত রূপ ।&lt;/p&gt;
+&lt;p&gt;আমরা আবার অনেকসময় দেখে থাকি $a\equiv b \text{ (mod m)}$ এর মানেই বা কি?&lt;/p&gt;
+&lt;p&gt;কখনো যদি $a \text{ (mod m)}=b \text{ (mod m)}$ হয় , তখন আমরা সংক্ষেপে লিখতে পারি $a\equiv b \text{ (mod m)}$ । এবং এটাকে পড়তে হয় &lt;code&gt;&amp;quot;a is congruent to b modulo m&amp;quot;&lt;/code&gt; এভাবে ।&lt;/p&gt;
+&lt;p&gt;এটাকে আমরা আরও একভাবে সংজ্ঞায়িত করতে পারি , যদি $(a-b)$ , $m$ দিয়ে নিঃশেষে ভাগ যায়, তাহলে আমরা লিখতে পারি $a\equiv b \text{ (mod m)}$ ।&lt;/p&gt;
+&lt;p&gt;আসলে দুইটা সংজ্ঞাই একই , একটু চিন্তা করলে বুঝতে পারবা।&lt;/p&gt;
+&lt;h2 id=&#34;properties&#34;&gt;Properties:&lt;/h2&gt;
+&lt;p&gt;আমরা কোন সমীকরণের দুইপাশে যেমন একই সংখ্যা দিয়ে যোগ , বিয়োগ, গুন  করতে পারি ঠিক তেমনি আমরা মডুলার অ্যারিথমেটিকেও উভয় দিকে একই সংখ্যা দিয়ে যোগ বিয়োগ গুন করতে পারি । [ &lt;em&gt;&lt;strong&gt;বিদ্রঃ উভয় দিকে একই সংখ্যা দিয়ে ভাগ করতে পারি না ।&lt;/strong&gt;&lt;/em&gt; ]&lt;/p&gt;
+&lt;p&gt;যেমন আমাদের রাশিটি যদি হয় $a\equiv b \text{ (mod m)}$ তাহলে কোন পূর্নসংখ্যা $k$ এর জন্য আমরা লিখতে পারি&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$a +k\equiv b+k \text{ (mod m)}$
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+.
+$a\equiv b \text{ (mod m)}$ হলে আমি বলতে পারি $a-b=mp$
+যেখানে &lt;code&gt;p&lt;/code&gt; হল $(a-b)$ কে &lt;code&gt;m&lt;/code&gt; দিয়ে ভাগ করলে যেই ভাগফল থাকবে সেইটা ( ২য় সংজ্ঞা দিয়ে চিন্তা কর)
+এখন ,
+$a-b=mp$
+= $(a+k)-(b+k)=mp$
+তারমানে বলতে পারি , $a +k\equiv b+k \text{ (mod m)}$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$a-k\equiv b-k \text{ (mod m)}$
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;pre&gt;&lt;code&gt;নিজে চেষ্টা কর।
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$a\times k\equiv b\times k \text{ (mod m)}$
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;pre&gt;&lt;code&gt;নিজে চেষ্টা কর।
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;আরও কিছু বৈশিষ্ট্য &amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a+p \equiv b+q \text{ (mod m)}$&lt;/li&gt;
+&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a-p \equiv b-q \text{ (mod m)}$&lt;/li&gt;
+&lt;li&gt;$a \equiv b \text{ (mod m)}$ এবং $p \equiv q \text{ (mod m)}$ হলে $a\times p \equiv b\times q \text{ (mod m)}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;residue-class&#34;&gt;Residue class:&lt;/h2&gt;
+&lt;p&gt;কোন ধনাত্মক পূর্নসংখ্যা , $n$ দিয়ে অন্য যেকোনো পূর্নসংখ্যাকে ভাগ করলে ভাগশেষের সম্ভাব্য সকল সংখ্যাকে নিয়ে যে সেট হয় , তাকে &lt;a href=&#34;https://artofproblemsolving.com/wiki/index.php/Residue_class&#34;&gt;রেসিডিউ ক্লাস&lt;/a&gt; বলে ।  সহজ ভাবে বললে , কোন পূর্ন সংখ্যা , $n$ দিয়ে অন্য যেকোনো পূর্নসংখ্যাকে ভাগ করি না কেন , ভাগশেষ অবশ্যই $0$ থেকে $n-1$ এর মধ্যে হবে ( $0$ এবং $n-1$ সহ ) । যেমনঃ $5$ দিয়ে কোন সংখ্যাকে ভাগ করলে ভাগশেষ হতে পারে ${0,1,2,3,4}$ । তাই $5$ এর রেসিডিউ ক্লাস হল ${0,1,2,3,4}$ ।&lt;/p&gt;
+&lt;h2 id=&#34;divisibility-rule&#34;&gt;Divisibility Rule:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$2$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;
+কোন সংখ্যার শেষ অংকটি যদি $2$ দিয়ে ভাগ যায় , অর্থাৎ $0,2,4,6,8$ এর মধ্যে যেকোনোটা হয় । তাহলে সংখ্যাটি $2$ দিয়ে বিভাজ্য ।
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+.
+মনে করি সংখ্যাটি $n=10x+p$ । অর্থাৎ এর শেষ অংকটি হল $p$ ।
+তাহলে আমরা বলতে পারি ,
+$n\equiv 10x+p \text{ (mod 2)}$
+$\Longrightarrow n\equiv 0+p \text{ (mod 2)}$
+$\Longrightarrow \boxed{n\equiv p \text{ (mod 2)}}$
+অর্থাৎ $p$ ( শেষ অংক) কে $2$ দিয়ে ভাগ করলে যেই ভাগশেষ থাকবে , $n$ কে $2$ দিয়ে ভাগ করলেও একই ভাগশেষ থাকবে ।
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$3$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;কোন সংখ্যার অংকগুলোর যোগফল যদি $3$ দিয়ে ভাগ যায়, তাহলে সংখ্যাটিও $3$ দিয়ে ভাগ যাবে ।
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;p&gt;.
+মনে করি সংখ্যাটি  $n=d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}$&lt;/p&gt;
+&lt;p&gt;সংক্ষেপে বললে , $n=\sum_{i=0}^{k-1}{10^{i}d_{i}}$
+এখানে $n$ হল $k$ অংকের একটি সংখ্যা , এবং এর অংকগুলো হল , $d_{0},d_{1},d_{2},&amp;hellip;,d_{k-1}$। যেখানে $d_{0}$ হল একক স্থানীয় অংক, $d_{1}$ হল দশক স্থানীয় অংক , &amp;hellip; ।
+এখন , $10^p\equiv10\times 10 \times &amp;hellip; \times 10 \text{ (mod 3)}$ [মোট $p$ সংখ্যক $10$]
+$\Longrightarrow 10^{p}\equiv 1\times 1\times 1 \times &amp;hellip; \times 1 \text{ (mod 3)} \equiv 1 \text{ (mod 3)}$&lt;/p&gt;
+&lt;p&gt;অর্থাৎ , $n\equiv d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}\text{ (mod 3)}$
+$\Longrightarrow \boxed{n\equiv d_{0}+d_{1}+d_{2}+&amp;hellip;+10d_{k-1} \text{ (mod 3)}}$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$4$ &lt;strong&gt;দিয়ে নিঃশেষে বিভাজ্য হওয়ার নিয়মঃ&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;কোন সংখ্যার শেষ দুই অংক নিয়ে গঠিত সংখ্যা যদি $4$ দিয়ে ভাগ যায়, তাহলে সংখ্যাটিও $4$ দিয়ে ভাগ যাবে ।
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+proof
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+.
+মনে করি সংখ্যাটি  $n=d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}$
+$\Longrightarrow n\equiv d_{0}+10d_{1}+100d_{2}+&amp;hellip;+10^{k-1}d_{k-1}\text{ (mod 4)}$
+$\Longrightarrow \boxed{n\equiv d_{0}+10d_{1}\text{ (mod 4)}}$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&amp;hellip;চলবে&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/modular-arithmetic/&#34;&gt;Brilliant Wiki&lt;/a&gt; (আমি যখন ব্রিলিয়ান্ট উইকি খুললাম তখন অবাক হয়ে গেলাম এটা দেখে যে সংজ্ঞার অংশ দুই জায়গায় ই একই :v )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Modulo_operation&#34;&gt;মডুলো অপারেশন - উইকিপিডিয়া&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Divisibility_rule&#34;&gt;Divisibility rule from wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/modular-arithmetic-misconceptions/&#34;&gt;Some Misconception about modulo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>
