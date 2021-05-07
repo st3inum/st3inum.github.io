@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   
-    <title>uva :: MathBugs</title>
+    <title>popoviciu :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/tags/uva/" />
+<link rel="canonical" href="https://st3inum.github.io/tags/popoviciu/" />
 
 
 
@@ -44,9 +44,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="uva">
+<meta property="og:title" content="popoviciu">
 <meta property="og:description" content="" />
-<meta property="og:url" content="https://st3inum.github.io/tags/uva/" />
+<meta property="og:url" content="https://st3inum.github.io/tags/popoviciu/" />
 <meta property="og:site_name" content="MathBugs" />
 
   
@@ -60,7 +60,7 @@
 
 
 
-  <link href="/tags/uva/index.xml" rel="alternate" type="application/rss+xml" title="MathBugs" />
+  <link href="/tags/popoviciu/index.xml" rel="alternate" type="application/rss+xml" title="MathBugs" />
 
 
 
@@ -181,104 +181,6 @@ We will iterate over all possible values of $P'$(there will be maximum $\frac{10
         <div>
           <a class="read-more button"
             href="/posts/uva-12775/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://st3inum.github.io/posts/uva-11029/">Leading and Trailing - UVA 11029</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2021-04-28
-          </span>
-          
-            <span class="post-author">:: steinum</span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://st3inum.github.io/tags/math/">math</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          For given $n$ and $m$ print the value LLL...TTT where LLL is the leading $3$ digits of $n^{m}$ and TTT is trailing $3$ digits of $n^{m}$.
-Inside Math: For TTT we just use modular arithmetic and find $n^{m} \text{ (mod 1000)}$
-Now, assume that , number of digit of $n^{m}$ is $x$. Hence LLL must be equals to $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$
-How to find x ?  click to hide  \begin{align} 10^{x-1} \le n^{m} &amp;&lt; 10^{x} \text{ [Number of digit in }10^{x-1}\text{ is equals to }x\text{ ]}\newline log_{10}{10^{x-1}} \le log_{10}{n^{m}} &amp;&lt; log_{10}{10^{x}} \newline x-1 \le m \times log_{10}{n} &amp;&lt; x \newline x &amp;\le m \times log_{10}{n} + 1 \newline \therefore\text{maximum possible integer value of }&amp;x\text{ is }\lfloor m \times log_{10}{n} + 1 \rfloor\text{ or }\lfloor m \times log_{10}{n} \rfloor +1 \end{align}    But how to calculate $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$ ?
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/posts/uva-11029/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://st3inum.github.io/posts/uva-13041/">Fraction and Sequence - UVA 13041</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2021-04-27
-          </span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/diophantine-equation/">diophantine equation</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/extended-euclid/">extended euclid</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/series/">series</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/codemarshal/">codemarshal</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          How many triplet $(a,b,c)$ are there such that $0\le a,b,c \le L$ and $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = \frac{p}{q}$ , for given $p,q,L$.
-Inside Math: Suppose, $A = \sum_{x=0}^{\infty}{ax^2\times (\frac{1}{10})^{x+1}}$
-$B = \sum_{x=0}^{\infty}{bx\times (\frac{1}{10})^{x+1}}$
-$C = \sum_{x=0}^{\infty}{c\times (\frac{1}{10})^{x+1}}$
-Hence, $\sum_{x=0}^{\infty}{(ax^{2}+bx+c)\times (\frac{1}{10})^{x+1}} = A+B+C$
-Now, we know(Actually we don&rsquo;t know this, we have to prove this. We&rsquo;ll try to prove this in some other section) that:
-$\sum_{x=0}^{\infty}{x^{2}r^{x+1}} = \frac{r^{2}(r+1)}{(r-1)^{3}} \tag{1}$
-$\sum_{x=0}^{\infty}{xr^{x+1}} = \frac{r^{2}}{(r-1)^{2}} \tag{2}$
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/posts/uva-13041/">Read more →</a>
         </div>
         
       </div>
