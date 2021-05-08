@@ -48,7 +48,7 @@ click to hide
 &lt;p&gt;Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &amp;lt; i \le n$) will be in range $[\frac{n}{n},\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;$\therefore$ number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.&lt;/p&gt;
+&lt;p&gt;$\therefore$ number of unique values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
