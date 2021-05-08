@@ -6,7 +6,122 @@
     <description>Recent content in Posts on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 May 2021 14:57:26 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 16:08:11 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H(n) - UVA 11526</title>
+      <link>https://st3inum.github.io/posts/uva-11526/</link>
+      <pubDate>Sat, 08 May 2021 16:08:11 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/uva-11526/</guid>
+      <description>For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
+The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.
+[But why?]  click to hide    Case 1: $x\le \sqrt{n}$
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values).</description>
+      <content>&lt;p&gt;For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$&lt;/p&gt;
+&lt;p&gt;The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+[But why?]
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Case 1: $x\le \sqrt{n}$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values). Which is equal to $\sqrt{n}$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Case 2: $x&amp;gt;\sqrt{n}$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &amp;lt; i \le n$) will be in range $[1,\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\therefore$ number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\therefore$ Number of different values of $\lfloor \frac{n}{i} \rfloor$ is maximum $2\sqrt{n}$.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, we will only iterate over those unique values of $\lfloor \frac{n}{i} \rfloor$.&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+How can we do it?
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary search&lt;/li&gt;
+&lt;li&gt;Doing some division &amp;hellip;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Gift Dilemma&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/11526.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinejudge.org/external/115/11526.pdf&#34;&gt;UVA - 11526&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeforces.com/blog/entry/53925&#34;&gt;Harmonic Lemma&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;similar-problems&#34;&gt;Similar Problems:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://lightoj.com/problem/harmonic-number-ii&#34;&gt;Harmonic Number (II) - Lightoj&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Modulo - Toph</title>
       <link>https://st3inum.github.io/posts/toph-modulo/</link>
@@ -170,7 +285,7 @@ C &amp;amp;\ge 200\times gcd(A,B,C) \newline
 
 &lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://onlinejudge.org/external/130/12775.pdf&#34;&gt;UVA - 12775&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinejudge.org/external/127/12775.pdf&#34;&gt;UVA - 12775&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://algo.codemarshal.org/contests/bd-ncpc-2014/problems/F&#34;&gt;Gift Dilemma : DIU NCPC 2014&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://brilliant.org/wiki/postage-stamp-problem-chicken-mcnugget-theorem/&#34;&gt;Popoviciu&amp;rsquo;s Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

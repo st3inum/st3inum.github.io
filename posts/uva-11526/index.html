@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   
-    <title>Modulo - Toph :: MathBugs</title>
+    <title>H(n) - UVA 11526 :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
-Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
-Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$." />
+<meta name="description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
+The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.
+[But why?]  click to hide    Case 1: $x\le \sqrt{n}$
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/posts/toph-modulo/" />
+<link rel="canonical" href="https://st3inum.github.io/posts/uva-11526/" />
 
 
 
@@ -46,11 +47,12 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Modulo - Toph">
-<meta property="og:description" content="You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
-Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
-Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$." />
-<meta property="og:url" content="https://st3inum.github.io/posts/toph-modulo/" />
+<meta property="og:title" content="H(n) - UVA 11526">
+<meta property="og:description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
+The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.
+[But why?]  click to hide    Case 1: $x\le \sqrt{n}$
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
+<meta property="og:url" content="https://st3inum.github.io/posts/uva-11526/" />
 <meta property="og:site_name" content="MathBugs" />
 
   <meta property="og:image" content="https://st3inum.github.io/">
@@ -59,7 +61,7 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
 <meta property="og:image:height" content="1024">
 
 
-  <meta property="article:published_time" content="2021-05-08 14:57:26 &#43;0600 &#43;06" />
+  <meta property="article:published_time" content="2021-05-08 16:08:11 &#43;0600 &#43;06" />
 
 
 
@@ -133,7 +135,7 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/toph-modulo/">Modulo - Toph</a></h1>
+    <a href="https://st3inum.github.io/posts/uva-11526/">H(n) - UVA 11526</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -148,9 +150,9 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
   
   <span class="post-tags">
     
-    #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/harmonic-lemma/">harmonic lemma</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/toph/">toph</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
     
   </span>
   
@@ -160,9 +162,8 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
   
 
   <div class="post-content"><div>
-        <p>You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.</p>
-<h2 id="solution">Solution:<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?</p>
+        <p>For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$</p>
+<p>The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.</p>
 
 <div class="spoiler panel panel-default">
 <div class='spoiler_block'>
@@ -170,7 +171,7 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
         
       
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
-<b>Answer</b>
+[But why?]
 </a>
 
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
@@ -178,44 +179,56 @@ click to hide
 </a>
 
 <div class='spoiler_block_content' style='display: none;'>
-When $A_{i}\ge x$
+<ul>
+<li>
+<p>Case 1: $x\le \sqrt{n}$</p>
+<ul>
+<li>Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values). Which is equal to $\sqrt{n}$.</li>
+</ul>
+</li>
+<li>
+<p>Case 2: $x&gt;\sqrt{n}$</p>
+<ul>
+<li>
+<p>Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &lt; i \le n$) will be in range $[1,\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.</p>
+</li>
+<li>
+<p>$\therefore$ number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>$\therefore$ Number of different values of $\lfloor \frac{n}{i} \rfloor$ is maximum $2\sqrt{n}$.</p>
+
 </div>
 </div>
 </div>
 
-<p>Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$.</p>
-<p>Hence, our solution is, for each query, we will iterate over only valid numbers, and do <code>%=</code> operation on them [<code>a%=x</code>].</p>
-<h2 id="inside-math">Inside Math:<a href="#inside-math" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>But why this solution will work?</p>
-<p>Suppose, $a$ is valid for $x$, and we have done $a'=a \text{ (mod $x$)}$.</p>
-<p>Now, $a'\le \frac{a}{2}$ [But why ?]</p>
+<p>Now, we will only iterate over those unique values of $\lfloor \frac{n}{i} \rfloor$.</p>
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+How can we do it?
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
 <ul>
-<li>
-<p>Case 1: $x\le \frac{a}{2}$</p>
-<ul>
-<li>
-<p>Hence, if we divide $a$ with $x$, the remainder will be smaller than $x$.</p>
-</li>
-<li>
-<p>$\therefore$ $a'\le x$ or $a'\le \frac{a}{2}$</p>
-</li>
+<li>Binary search</li>
+<li>Doing some division &hellip;.</li>
 </ul>
-</li>
-<li>
-<p>Case 2: $x&gt;\frac{a}{2}$</p>
-<ul>
-<li>
-<p>Hence the remainder will be $a-x$.</p>
-</li>
-<li>
-<p>$\therefore a'=a-x$ or $a'\le\frac{a}{2}$</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>Hence, one value, $A_{i}$,  will become a valid value atmost $log_{2}{(2^{60})} = 60$ times.</p>
-<p>Hence if we iterate over only the valid value , number of overall iteration will be $60\times q$.</p>
-<p>But as we are using <code>priority_queue</code> to maintain our array our total complexity will be $O(qlog(n)log(A_{max}))$</p>
+
+</div>
+</div>
+</div>
+
 
 
 
@@ -223,7 +236,7 @@ When $A_{i}\ge x$
     <input id="1" type="checkbox"  />
     <label for="1">
       <span class="collapsable-code__language">cpp</span>
-      <span class="collapsable-code__title">Modulo</span>
+      <span class="collapsable-code__title">Gift Dilemma</span>
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
     <pre class="language-cpp" ><code id="code1">
@@ -233,7 +246,7 @@ When $A_{i}\ge x$
 
 <script type="text/javascript">
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/modulo.cpp', false ); 
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/11526.cpp', false ); 
     xmlHttp.send( null );
     var div = document.getElementById('code1');
     div.textContent = '\n'+xmlHttp.responseText;
@@ -244,7 +257,12 @@ When $A_{i}\ge x$
 
 <h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://toph.co/p/modulo">Modulo - Toph</a></li>
+<li><a href="https://onlinejudge.org/external/115/11526.pdf">UVA - 11526</a></li>
+<li><a href="https://codeforces.com/blog/entry/53925">Harmonic Lemma</a></li>
+</ul>
+<h2 id="similar-problems">Similar Problems:<a href="#similar-problems" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="https://lightoj.com/problem/harmonic-number-ii">Harmonic Number (II) - Lightoj</a></li>
 </ul>
 
       </div></div>
@@ -258,17 +276,10 @@ When $A_{i}\ge x$
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://st3inum.github.io/posts/uva-11526/">
-                <span class="button__icon">←</span>
-                <span class="button__text">H(n) - UVA 11526</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://st3inum.github.io/posts/uva-12775/">
-                <span class="button__text">Gift Dilemma - UVA 12775</span>
+            <a href="https://st3inum.github.io/posts/toph-modulo/">
+                <span class="button__text">Modulo - Toph</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

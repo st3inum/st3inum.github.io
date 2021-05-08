@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/posts/uva-11526/</loc>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/harmonic-lemma/</loc>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/uva/</loc>
+    <lastmod>2021-05-08T16:08:11+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/toph-modulo/</loc>
     <lastmod>2021-05-08T14:57:26+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/number-theory/</loc>
-    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-05-08T14:57:26+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/toph/</loc>
@@ -33,9 +42,6 @@
     <lastmod>2021-05-07T13:01:54+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/popoviciu/</loc>
-    <lastmod>2021-05-07T13:01:54+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/uva/</loc>
     <lastmod>2021-05-07T13:01:54+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/codechef/</loc>
@@ -109,9 +115,6 @@
   </url><url>
     <loc>https://st3inum.github.io/tags/segmented-sieve/</loc>
     <lastmod>2021-04-22T10:03:45+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/harmonic-lemma/</loc>
-    <lastmod>2021-04-22T02:31:20+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/toph-prime-factor-love/</loc>
     <lastmod>2021-04-22T02:31:20+06:00</lastmod>
