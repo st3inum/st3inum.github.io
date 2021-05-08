@@ -213,6 +213,9 @@ When $A_{i}\ge x$
 </ul>
 </li>
 </ul>
+<p>Hence, one value, $A_{i}$,  will become a valid value atmost $log_{2}{(2^{60})} = 60$ times.</p>
+<p>Hence if we iterate over only the valid value , number of overall iteration will be $60\times q$.</p>
+<p>But as we are using <code>priority_queue</code> to maintain our array our total complexity will be $O(qlog(n)log(A_{max}))$</p>
 
 
 

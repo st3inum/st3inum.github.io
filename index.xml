@@ -69,6 +69,9 @@ When $A_{i}\ge x$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Hence, one value, $A_{i}$,  will become a valid value atmost $log_{2}{(2^{60})} = 60$ times.&lt;/p&gt;
+&lt;p&gt;Hence if we iterate over only the valid value , number of overall iteration will be $60\times q$.&lt;/p&gt;
+&lt;p&gt;But as we are using &lt;code&gt;priority_queue&lt;/code&gt; to maintain our array our total complexity will be $O(qlog(n)log(A_{max}))$&lt;/p&gt;
 
 
 
