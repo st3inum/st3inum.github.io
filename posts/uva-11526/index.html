@@ -9,7 +9,7 @@
 <meta name="description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
 The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
 [But why?]  click to hide    Case 1: $x\le \sqrt{n}$
- Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different, even then there will be $x$ values)." />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://st3inum.github.io/posts/uva-11526/" />
@@ -51,7 +51,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
 <meta property="og:description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
 The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
 [But why?]  click to hide    Case 1: $x\le \sqrt{n}$
- Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different, even then there will be $x$ values)." />
 <meta property="og:url" content="https://st3inum.github.io/posts/uva-11526/" />
 <meta property="og:site_name" content="MathBugs" />
 
@@ -183,14 +183,14 @@ click to hide
 <li>
 <p>Case 1: $x\le \sqrt{n}$</p>
 <ul>
-<li>Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values). Which is equal to $\sqrt{n}$.</li>
+<li>Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different, even then there will be $x$ values). Which is equal to $\sqrt{n}$.</li>
 </ul>
 </li>
 <li>
 <p>Case 2: $x&gt;\sqrt{n}$</p>
 <ul>
 <li>
-<p>Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &lt; i \le n$) will be in range $[1,\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.</p>
+<p>Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &lt; i \le n$) will be in range $[\frac{n}{n},\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.</p>
 </li>
 <li>
 <p>$\therefore$ number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.</p>

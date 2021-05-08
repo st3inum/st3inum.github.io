@@ -16,7 +16,7 @@
       <description>For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
 The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
 [But why?]  click to hide    Case 1: $x\le \sqrt{n}$
- Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values).</description>
+ Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different, even then there will be $x$ values).</description>
       <content>&lt;p&gt;For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$&lt;/p&gt;
 &lt;p&gt;The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]&lt;/p&gt;
 
@@ -38,14 +38,14 @@ click to hide
 &lt;li&gt;
 &lt;p&gt;Case 1: $x\le \sqrt{n}$&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values). Which is equal to $\sqrt{n}$.&lt;/li&gt;
+&lt;li&gt;Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different, even then there will be $x$ values). Which is equal to $\sqrt{n}$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Case 2: $x&amp;gt;\sqrt{n}$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &amp;lt; i \le n$) will be in range $[1,\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.&lt;/p&gt;
+&lt;p&gt;Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &amp;lt; i \le n$) will be in range $[\frac{n}{n},\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;$\therefore$ number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.&lt;/p&gt;
