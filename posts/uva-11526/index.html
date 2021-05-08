@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   
-    <title>H(n) - UVA 11526 :: MathBugs</title>
+    <title>Harmonic Lemma : H(n) - UVA 11526 :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
-The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.
+The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
 [But why?]  click to hide    Case 1: $x\le \sqrt{n}$
  Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
 <meta name="keywords" content=", " />
@@ -47,9 +47,9 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="H(n) - UVA 11526">
+<meta property="og:title" content="Harmonic Lemma : H(n) - UVA 11526">
 <meta property="og:description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
-The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.
+The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
 [But why?]  click to hide    Case 1: $x\le \sqrt{n}$
  Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because if all values were different even then there will be $x$ values)." />
 <meta property="og:url" content="https://st3inum.github.io/posts/uva-11526/" />
@@ -135,7 +135,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/uva-11526/">H(n) - UVA 11526</a></h1>
+    <a href="https://st3inum.github.io/posts/uva-11526/">Harmonic Lemma : H(n) - UVA 11526</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -163,7 +163,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
 
   <div class="post-content"><div>
         <p>For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$</p>
-<p>The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$.</p>
+<p>The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]</p>
 
 <div class="spoiler panel panel-default">
 <div class='spoiler_block'>
@@ -228,6 +228,26 @@ click to hide
 </div>
 </div>
 </div>
+
+
+
+
+  <div class="collapsable-code">
+    <input id="2" type="checkbox" checked />
+    <label for="2">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">Harmonic Lemma code template</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code2">
+
+for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 1) {
+	// all value x in range [i,j] will have same value floor(n/x) = v
+}
+</code></pre>
+  </div>
+
+
 
 
 
