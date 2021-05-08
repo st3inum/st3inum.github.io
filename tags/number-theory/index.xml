@@ -6,7 +6,102 @@
     <description>Recent content in number theory on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 May 2021 13:01:54 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/number-theory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 14:57:26 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/number-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modulo - Toph</title>
+      <link>https://st3inum.github.io/posts/toph-modulo/</link>
+      <pubDate>Sat, 08 May 2021 14:57:26 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/toph-modulo/</guid>
+      <description>You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
+Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
+Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$.</description>
+      <content>&lt;p&gt;You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution:&lt;/h2&gt;
+&lt;p&gt;When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Answer&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+When $A_{i}\ge x$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$.&lt;/p&gt;
+&lt;p&gt;Hence, our solution is, for each query, we will iterate over only valid numbers, and do &lt;code&gt;%=&lt;/code&gt; operation on them [&lt;code&gt;a%=x&lt;/code&gt;].&lt;/p&gt;
+&lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
+&lt;p&gt;But why this solution will work?&lt;/p&gt;
+&lt;p&gt;Suppose, $a$ is valid for $x$, and we have done $a&#39;=a \text{ (mod $x$)}$.&lt;/p&gt;
+&lt;p&gt;Now, $a&#39;\le \frac{a}{2}$ [But why ?]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Case 1: $x\le \frac{a}{2}$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hence, if we divide $a$ with $x$, the remainder will be smaller than $x$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\therefore$ $a&#39;\le x$ or $a&#39;\le \frac{a}{2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Case 2: $x&amp;gt;\frac{a}{2}$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hence the remainder will be $a-x$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\therefore a&#39;=a-x$ or $a&#39;\le\frac{a}{2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Modulo&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/modulo.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://toph.co/p/modulo&#34;&gt;Modulo - Toph&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Gift Dilemma - UVA 12775</title>
       <link>https://st3inum.github.io/posts/uva-12775/</link>

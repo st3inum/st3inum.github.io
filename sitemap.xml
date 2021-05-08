@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/toph-modulo/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/number-theory/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/toph/</loc>
+    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/tags/codemarshal/</loc>
     <lastmod>2021-05-07T13:01:54+06:00</lastmod>
   </url><url>
@@ -14,19 +32,7 @@
     <loc>https://st3inum.github.io/posts/uva-12775/</loc>
     <lastmod>2021-05-07T13:01:54+06:00</lastmod>
   </url><url>
-    <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-05-07T13:01:54+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/number-theory/</loc>
-    <lastmod>2021-05-07T13:01:54+06:00</lastmod>
-  </url><url>
     <loc>https://st3inum.github.io/tags/popoviciu/</loc>
-    <lastmod>2021-05-07T13:01:54+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-05-07T13:01:54+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-05-07T13:01:54+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/uva/</loc>
@@ -81,9 +87,6 @@
     <lastmod>2021-04-26T01:06:15+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/divide-and-conquer/</loc>
-    <lastmod>2021-04-26T01:06:15+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/toph/</loc>
     <lastmod>2021-04-26T01:06:15+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/about/</loc>
