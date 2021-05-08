@@ -6,9 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
-Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
-Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$." />
+<meta name="description" content="You will be given an array, $A$ of length $n$ and $q$ queries. In each query you will be given a value $x$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
+Constraints  click to hide   $A_{i} \le 2^{60}$ $n\le 10^{5}$ $q\le 10^{5}$ $x \le 2^{60}$     Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?" />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://st3inum.github.io/posts/toph-modulo/" />
@@ -47,9 +46,8 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Modulo - Toph">
-<meta property="og:description" content="You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
-Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
-Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$." />
+<meta property="og:description" content="You will be given an array, $A$ of length $n$ and $q$ queries. In each query you will be given a value $x$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
+Constraints  click to hide   $A_{i} \le 2^{60}$ $n\le 10^{5}$ $q\le 10^{5}$ $x \le 2^{60}$     Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?" />
 <meta property="og:url" content="https://st3inum.github.io/posts/toph-modulo/" />
 <meta property="og:site_name" content="MathBugs" />
 
@@ -160,7 +158,33 @@ Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a giv
   
 
   <div class="post-content"><div>
-        <p>You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.</p>
+        <p>You will be given an array, $A$ of length $n$ and $q$ queries. In each query you will be given a value $x$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.</p>
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+<b>Constraints</b>
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
+<ul>
+<li>$A_{i} \le 2^{60}$</li>
+<li>$n\le 10^{5}$</li>
+<li>$q\le 10^{5}$</li>
+<li>$x \le 2^{60}$</li>
+</ul>
+
+</div>
+</div>
+</div>
+
 <h2 id="solution">Solution:<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?</p>
 
@@ -214,8 +238,8 @@ When $A_{i}\ge x$
 </li>
 </ul>
 <p>Hence, one value, $A_{i}$,  will become a valid value atmost $log_{2}{(2^{60})} = 60$ times.</p>
-<p>Hence if we iterate over only the valid value , number of overall iteration will be $60\times q$.</p>
-<p>But as we are using <code>priority_queue</code> to maintain our array our total complexity will be $O(qlog(n)log(A_{max}))$</p>
+<p>Hence if we iterate over only the valid value , number of overall iteration will be amortize $60\times n$.</p>
+<p>But as we are using <code>priority_queue</code> to maintain our array our total complexity will be $O(nlog(n)log(A_{max}))$</p>
 
 
 

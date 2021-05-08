@@ -13,10 +13,35 @@
       <pubDate>Sat, 08 May 2021 14:57:26 +0600</pubDate>
       
       <guid>https://st3inum.github.io/posts/toph-modulo/</guid>
-      <description>You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
-Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?
-Answer  click to hide  When $A_{i}\ge x$    Lets call a $A_{i}$ valid, for a given $x$, if $A_{i}\ge x$.</description>
-      <content>&lt;p&gt;You will be given an array, $A$ of length $n\le 10^{5}$ and $q\le 10^{5}$ queries. In each query you will be given a value $x \le 2^{60}$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.&lt;/p&gt;
+      <description>You will be given an array, $A$ of length $n$ and $q$ queries. In each query you will be given a value $x$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.
+Constraints  click to hide   $A_{i} \le 2^{60}$ $n\le 10^{5}$ $q\le 10^{5}$ $x \le 2^{60}$     Solution: When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?</description>
+      <content>&lt;p&gt;You will be given an array, $A$ of length $n$ and $q$ queries. In each query you will be given a value $x$. You have to perform $A_{i} = A_{i} \text{ (mod $x$)} , 1 \le i \le n$ for each query , and after all the query print the array.&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Constraints&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;$A_{i} \le 2^{60}$&lt;/li&gt;
+&lt;li&gt;$n\le 10^{5}$&lt;/li&gt;
+&lt;li&gt;$q\le 10^{5}$&lt;/li&gt;
+&lt;li&gt;$x \le 2^{60}$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;solution&#34;&gt;Solution:&lt;/h2&gt;
 &lt;p&gt;When $A_{i} = A_{i} \text{ (mod $x$)}$ operation change $A_{i}$ ?&lt;/p&gt;
 
@@ -70,8 +95,8 @@ When $A_{i}\ge x$
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Hence, one value, $A_{i}$,  will become a valid value atmost $log_{2}{(2^{60})} = 60$ times.&lt;/p&gt;
-&lt;p&gt;Hence if we iterate over only the valid value , number of overall iteration will be $60\times q$.&lt;/p&gt;
-&lt;p&gt;But as we are using &lt;code&gt;priority_queue&lt;/code&gt; to maintain our array our total complexity will be $O(qlog(n)log(A_{max}))$&lt;/p&gt;
+&lt;p&gt;Hence if we iterate over only the valid value , number of overall iteration will be amortize $60\times n$.&lt;/p&gt;
+&lt;p&gt;But as we are using &lt;code&gt;priority_queue&lt;/code&gt; to maintain our array our total complexity will be $O(nlog(n)log(A_{max}))$&lt;/p&gt;
 
 
 
