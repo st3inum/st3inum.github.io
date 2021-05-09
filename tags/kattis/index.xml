@@ -70,8 +70,8 @@ click to hide
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now, calculate $y = x \text{ (mod m)}$.&lt;/p&gt;
-&lt;p&gt;Again, calculate $n! \text{ (mod m)}$ , for all $n \in [0,10^{6}]$. And check, if it matches with $y$.&lt;/p&gt;
+&lt;p&gt;Now, calculate $y = H(x) = x \text{ (mod m)}$.&lt;/p&gt;
+&lt;p&gt;Again, calculate $H(n!) = n! \text{ (mod m)}$ , for all $n \in [0,10^{6}]$. And check, if it matches with $y$.&lt;/p&gt;
 &lt;p&gt;Hence we can find $f^{-1}{(x)}$.&lt;/p&gt;
 &lt;p&gt;If we choose good $m$ , our probability of collision[that is $H(p)=H(q)$ while $p\neq q$] will be too much low.&lt;/p&gt;
 &lt;p&gt;If you don&amp;rsquo;t know how to &lt;code&gt;mod&lt;/code&gt; , read &lt;a href=&#34;https://st3inum.github.io/posts/intro-to-modular-arithmetic/&#34;&gt;this&lt;/a&gt; article.&lt;/p&gt;
