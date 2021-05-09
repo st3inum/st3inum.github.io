@@ -16,9 +16,8 @@
       <description>$$f(n)=n!$$
  Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
 Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
-Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.
-Hence, we can uniquely represent every $p$ by $H(p)$.
-How to make $H(p)$  click to hide  $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]</description>
+Suppose, we have a function $H(p)$ which return some small integer value for corresponding $p$. And $H(p)\neq H(q)$ if $p\neq q$.
+Hence, we can uniquely represent every $p$ by $H(p)$.</description>
       <content>&lt;blockquote&gt;
 &lt;p&gt;$$f(n)=n!$$&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -45,7 +44,7 @@ number of digit in $x$ is atmost $10^{6}$
 
 &lt;h2 id=&#34;solution&#34;&gt;Solution:&lt;/h2&gt;
 &lt;p&gt;At first this problem seems too hard.&lt;/p&gt;
-&lt;p&gt;Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.&lt;/p&gt;
+&lt;p&gt;Suppose, we have a function $H(p)$ which return some small integer value for corresponding $p$. And $H(p)\neq H(q)$ if $p\neq q$.&lt;/p&gt;
 &lt;p&gt;Hence, we can uniquely represent every $p$ by $H(p)$.&lt;/p&gt;
 
 &lt;div class=&#34;spoiler panel panel-default&#34;&gt;
