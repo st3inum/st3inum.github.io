@@ -154,6 +154,50 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://st3inum.github.io/posts/uva-11029/">Leading and Trailing - UVA 11029</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2021-04-28
+          </span>
+          
+            <span class="post-author">:: steinum</span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://st3inum.github.io/tags/math/">math</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          For given $n$ and $m$ print the value LLL...TTT where LLL is the leading $3$ digits of $n^{m}$ and TTT is trailing $3$ digits of $n^{m}$.
+Inside Math: For TTT we just use modular arithmetic and find $n^{m} \text{ (mod 1000)}$
+Now, assume that , number of digit of $n^{m}$ is $x$. Hence LLL must be equals to $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$
+How to find x ?  click to hide  \begin{align} 10^{x-1} \le n^{m} &amp;&lt; 10^{x} \text{ [Number of digit in }10^{x-1}\text{ is equals to }x\text{ ]}\newline log_{10}{10^{x-1}} \le log_{10}{n^{m}} &amp;&lt; log_{10}{10^{x}} \newline x-1 \le m \times log_{10}{n} &amp;&lt; x \newline x &amp;\le m \times log_{10}{n} + 1 \newline \therefore\text{maximum possible integer value of }&amp;x\text{ is }\lfloor m \times log_{10}{n} + 1 \rfloor\text{ or }\lfloor m \times log_{10}{n} \rfloor +1 \end{align}    But how to calculate $\lfloor \frac{n^{m}}{10^{x-3}}\rfloor$ ?
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/posts/uva-11029/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://st3inum.github.io/posts/uva-13041/">Fraction and Sequence - UVA 13041</a>
         </h1>
         <div class="post-meta">
@@ -334,45 +378,6 @@ Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \e
         <div>
           <a class="read-more button"
             href="/posts/timus-1017/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://st3inum.github.io/posts/codeforces-101201a/">Alphabet - Codeforces - 101201a</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2021-04-22
-          </span>
-          
-            <span class="post-author">:: steinum</span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://st3inum.github.io/tags/dp/">dp</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/codeforces/">codeforces</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          insert minimum number of character in a given string after which the resulting string contain a subsequence <code>abcdefgh...xyz</code>
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/posts/codeforces-101201a/">Read more →</a>
         </div>
         
       </div>

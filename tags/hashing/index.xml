@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hashing on MathBugs</title>
+    <link>https://st3inum.github.io/tags/hashing/</link>
+    <description>Recent content in hashing on MathBugs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 May 2021 20:13:49 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/hashing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hashing 1 : Inverse Factorial - Kattis inversefactorial</title>
+      <link>https://st3inum.github.io/posts/kattis-inversefactorial/</link>
+      <pubDate>Sat, 08 May 2021 20:13:49 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/kattis-inversefactorial/</guid>
+      <description>$$f(n)=n!$$
+ Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
+Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
+Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.
+Hence, we can uniquely represent every $p$ by $H(p)$.
+How to make $H(p)$  click to hide  $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]</description>
+      <content>&lt;blockquote&gt;
+&lt;p&gt;$$f(n)=n!$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Constraints&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+number of digit in $x$ is atmost $10^{6}$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution:&lt;/h2&gt;
+&lt;p&gt;At first this problem seems too hard.&lt;/p&gt;
+&lt;p&gt;Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.&lt;/p&gt;
+&lt;p&gt;Hence, we can uniquely represent every $p$ by $H(p)$.&lt;/p&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+How to make $H(p)$
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;p&gt;$H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]&lt;/p&gt;
+&lt;p&gt;But, does this function follow [&lt;strong&gt;$H(p)\neq H(q)$ if $p\neq q$&lt;/strong&gt;] this condition ?&lt;/p&gt;
+&lt;p&gt;No. But we can choose some good $m$ [different for different types of problem], to do better performance[to follow the condition].&lt;/p&gt;
+&lt;p&gt;We can take prime number as the value of $m$. It will be good.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, calculate $y = x \text{ (mod m)}$.&lt;/p&gt;
+&lt;p&gt;Again, calculate $n! \text{ (mod m)}$ , for all $n \in [0,10^{6}]$. And check, if it matches with $y$.&lt;/p&gt;
+&lt;p&gt;Hence we can find $f^{-1}{(x)}$.&lt;/p&gt;
+&lt;p&gt;If we choose good $m$ , our probability of collision[that is $H(p)=H(q)$ while $p\neq q$] will be too much low.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t know how to &lt;code&gt;mod&lt;/code&gt; , read &lt;a href=&#34;https://st3inum.github.io/posts/intro-to-modular-arithmetic/&#34;&gt;this&lt;/a&gt; article.&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Inverse Factorial&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/kattis\/inversefactorial.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://open.kattis.com/problems/inversefactorial&#34;&gt;Kattis - inversefactorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;similar-problems&#34;&gt;Similar Problems:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codechef.com/problems/AMIFIB&#34;&gt;Am I a Fibonacci Number - Codechef&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

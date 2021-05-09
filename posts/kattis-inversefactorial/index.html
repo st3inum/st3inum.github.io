@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   
-    <title>Harmonic Lemma : H(n) - UVA 11526 :: MathBugs</title>
+    <title>Hashing 1 : Inverse Factorial - Kattis inversefactorial :: MathBugs</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
-The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
-[But why?]  click to hide    Case 1: $x\le \sqrt{n}$
- Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because, if all values were different, even then there will be $x$ values)." />
-<meta name="keywords" content=", " />
+<meta name="description" content="$$f(n)=n!$$
+ Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
+Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
+Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.
+Hence, we can uniquely represent every $p$ by $H(p)$.
+How to make $H(p)$  click to hide  $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]" />
+<meta name="keywords" content="Modular Arithmetic, " />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://st3inum.github.io/posts/uva-11526/" />
+<link rel="canonical" href="https://st3inum.github.io/posts/kattis-inversefactorial/" />
 
 
 
@@ -57,12 +59,14 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Harmonic Lemma : H(n) - UVA 11526">
-<meta property="og:description" content="For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$
-The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]
-[But why?]  click to hide    Case 1: $x\le \sqrt{n}$
- Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because, if all values were different, even then there will be $x$ values)." />
-<meta property="og:url" content="https://st3inum.github.io/posts/uva-11526/" />
+<meta property="og:title" content="Hashing 1 : Inverse Factorial - Kattis inversefactorial">
+<meta property="og:description" content="$$f(n)=n!$$
+ Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
+Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
+Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.
+Hence, we can uniquely represent every $p$ by $H(p)$.
+How to make $H(p)$  click to hide  $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]" />
+<meta property="og:url" content="https://st3inum.github.io/posts/kattis-inversefactorial/" />
 <meta property="og:site_name" content="MathBugs" />
 
   <meta property="og:image" content="https://st3inum.github.io/">
@@ -71,7 +75,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
 <meta property="og:image:height" content="1024">
 
 
-  <meta property="article:published_time" content="2021-05-08 16:08:11 &#43;0600 &#43;06" />
+  <meta property="article:published_time" content="2021-05-08 20:13:49 &#43;0600 &#43;06" />
 
 
 
@@ -145,7 +149,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://st3inum.github.io/posts/uva-11526/">Harmonic Lemma : H(n) - UVA 11526</a></h1>
+    <a href="https://st3inum.github.io/posts/kattis-inversefactorial/">Hashing 1 : Inverse Factorial - Kattis inversefactorial</a></h1>
   <div class="post-meta">
     
       <span class="post-date">
@@ -160,9 +164,9 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
   
   <span class="post-tags">
     
-    #<a href="https://st3inum.github.io/tags/harmonic-lemma/">harmonic lemma</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/hashing/">hashing</a>&nbsp;
     
-    #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
+    #<a href="https://st3inum.github.io/tags/kattis/">kattis</a>&nbsp;
     
   </span>
   
@@ -172,8 +176,10 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
   
 
   <div class="post-content"><div>
-        <p>For a given $n$ , calculate $\sum_{i=1}^{n}{\lfloor \frac{n}{i} \rfloor}$</p>
-<p>The main idea of this problem is there are maximum $2\sqrt{n}$ different values of $\lfloor \frac{n}{i} \rfloor$. [This is also known as Harmonic lemma]</p>
+        <blockquote>
+<p>$$f(n)=n!$$</p>
+</blockquote>
+<p>Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].</p>
 
 <div class="spoiler panel panel-default">
 <div class='spoiler_block'>
@@ -181,7 +187,7 @@ The main idea of this problem is there are maximum $2\sqrt{n}$ different values 
         
       
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
-[But why?]
+<b>Constraints</b>
 </a>
 
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
@@ -189,32 +195,15 @@ click to hide
 </a>
 
 <div class='spoiler_block_content' style='display: none;'>
-<ul>
-<li>
-<p>Case 1: $x\le \sqrt{n}$</p>
-<ul>
-<li>Hence, if we divide $n$ with $1\le i\le x$, number of values of $\lfloor \frac{n}{i} \rfloor$ will be at most $x$ (because, if all values were different, even then there will be $x$ values). Which is equal to $\sqrt{n}$.</li>
-</ul>
-</li>
-<li>
-<p>Case 2: $x&gt;\sqrt{n}$</p>
-<ul>
-<li>
-<p>Hence the values of $\lfloor \frac{n}{i} \rfloor$ (where $\sqrt{n} &lt; i \le n$) will be in range $[\frac{n}{n},\frac{n}{\sqrt{n}}] = [1,\sqrt{n}]$.</p>
-</li>
-<li>
-<p>$\therefore$ number of unique values of $\lfloor \frac{n}{i} \rfloor$ will be at most $\sqrt{n}$.</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>$\therefore$ Number of different values of $\lfloor \frac{n}{i} \rfloor$ is maximum $2\sqrt{n}$.</p>
-
+number of digit in $x$ is atmost $10^{6}$
 </div>
 </div>
 </div>
 
-<p>Now, we will only iterate over those unique values of $\lfloor \frac{n}{i} \rfloor$.</p>
+<h2 id="solution">Solution:<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>At first this problem seems too hard.</p>
+<p>Suppose, we have a function $H(p)$ which return some small integer value. And $H(p)\neq H(q)$ if $p\neq q$.</p>
+<p>Hence, we can uniquely represent every $p$ by $H(p)$.</p>
 
 <div class="spoiler panel panel-default">
 <div class='spoiler_block'>
@@ -222,7 +211,7 @@ click to hide
         
       
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
-How can we do it?
+How to make $H(p)$
 </a>
 
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
@@ -230,35 +219,20 @@ click to hide
 </a>
 
 <div class='spoiler_block_content' style='display: none;'>
-<ul>
-<li>Binary search</li>
-<li>Doing some division &hellip;.</li>
-</ul>
+<p>$H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]</p>
+<p>But, does this function follow [<strong>$H(p)\neq H(q)$ if $p\neq q$</strong>] this condition ?</p>
+<p>No. But we can choose some good $m$ [different for different types of problem], to do better performance[to follow the condition].</p>
+<p>We can take prime number as the value of $m$. It will be good.</p>
 
 </div>
 </div>
 </div>
 
-
-
-
-  <div class="collapsable-code">
-    <input id="2" type="checkbox" checked />
-    <label for="2">
-      <span class="collapsable-code__language">cpp</span>
-      <span class="collapsable-code__title">Harmonic Lemma code template</span>
-      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
-    </label>
-    <pre class="language-cpp" ><code id="code2">
-
-for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 1) {
-	// all value x in range [i,j] will have same value floor(n/x) = v
-}
-</code></pre>
-  </div>
-
-
-
+<p>Now, calculate $y = x \text{ (mod m)}$.</p>
+<p>Again, calculate $n! \text{ (mod m)}$ , for all $n \in [0,10^{6}]$. And check, if it matches with $y$.</p>
+<p>Hence we can find $f^{-1}{(x)}$.</p>
+<p>If we choose good $m$ , our probability of collision[that is $H(p)=H(q)$ while $p\neq q$] will be too much low.</p>
+<p>If you don&rsquo;t know how to <code>mod</code> , read <a href="https://st3inum.github.io/posts/intro-to-modular-arithmetic/">this</a> article.</p>
 
 
 
@@ -266,7 +240,7 @@ for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 
     <input id="1" type="checkbox"  />
     <label for="1">
       <span class="collapsable-code__language">cpp</span>
-      <span class="collapsable-code__title">Gift Dilemma</span>
+      <span class="collapsable-code__title">Inverse Factorial</span>
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
     <pre class="language-cpp" ><code id="code1">
@@ -276,7 +250,7 @@ for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 
 
 <script type="text/javascript">
   var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/uva\/11526.cpp', false ); 
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/kattis\/inversefactorial.cpp', false ); 
     xmlHttp.send( null );
     var div = document.getElementById('code1');
     div.textContent = '\n'+xmlHttp.responseText;
@@ -287,12 +261,11 @@ for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 
 
 <h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://onlinejudge.org/external/115/11526.pdf">UVA - 11526</a></li>
-<li><a href="https://codeforces.com/blog/entry/53925">Harmonic Lemma</a></li>
+<li><a href="https://open.kattis.com/problems/inversefactorial">Kattis - inversefactorial</a></li>
 </ul>
 <h2 id="similar-problems">Similar Problems:<a href="#similar-problems" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><a href="https://lightoj.com/problem/harmonic-number-ii">Harmonic Number (II) - Lightoj</a></li>
+<li><a href="https://www.codechef.com/problems/AMIFIB">Am I a Fibonacci Number - Codechef</a></li>
 </ul>
 
       </div></div>
@@ -306,17 +279,10 @@ for (int i = 1, j, v; i &lt;= n &amp;&amp; (j = n / (v = (n / i))); i = j &#43; 
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://st3inum.github.io/posts/kattis-inversefactorial/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Hashing 1 : Inverse Factorial - Kattis inversefactorial</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://st3inum.github.io/posts/toph-modulo/">
-                <span class="button__text">Modulo - Toph</span>
+            <a href="https://st3inum.github.io/posts/uva-11526/">
+                <span class="button__text">Harmonic Lemma : H(n) - UVA 11526</span>
                 <span class="button__icon">→</span>
             </a>
         </span>
