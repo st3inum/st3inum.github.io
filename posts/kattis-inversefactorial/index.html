@@ -8,9 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="$$f(n)=n!$$
  Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
-Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
-Suppose, we have a function $H(p)$ which return some small integer value for corresponding $p$. And $H(p)\neq H(q)$ if $p\neq q$.
-Hence, we can uniquely represent every $p$ by $H(p)$." />
+Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first, this problem seems too hard.
+Suppose, we have a bijective function $H(p)$ which return some small integer value for corresponding $p$.
+Hence, we can uniquely represent every $p$ by $H(p)$.
+How to make $H(p)$  click to hide   $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]" />
 <meta name="keywords" content="Modular Arithmetic, " />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://st3inum.github.io/posts/kattis-inversefactorial/" />
@@ -61,9 +62,10 @@ Hence, we can uniquely represent every $p$ by $H(p)$." />
 <meta property="og:title" content="Hashing 1 : Inverse Factorial - Kattis inversefactorial">
 <meta property="og:description" content="$$f(n)=n!$$
  Given a value $x$ , find $f^{-1}{(x)}$ [that is, such $n$ so that $f(n)=x$].
-Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first this problem seems too hard.
-Suppose, we have a function $H(p)$ which return some small integer value for corresponding $p$. And $H(p)\neq H(q)$ if $p\neq q$.
-Hence, we can uniquely represent every $p$ by $H(p)$." />
+Constraints  click to hide  number of digit in $x$ is atmost $10^{6}$    Solution: At first, this problem seems too hard.
+Suppose, we have a bijective function $H(p)$ which return some small integer value for corresponding $p$.
+Hence, we can uniquely represent every $p$ by $H(p)$.
+How to make $H(p)$  click to hide   $H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]" />
 <meta property="og:url" content="https://st3inum.github.io/posts/kattis-inversefactorial/" />
 <meta property="og:site_name" content="MathBugs" />
 
@@ -199,8 +201,8 @@ number of digit in $x$ is atmost $10^{6}$
 </div>
 
 <h2 id="solution">Solution:<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>At first this problem seems too hard.</p>
-<p>Suppose, we have a function $H(p)$ which return some small integer value for corresponding $p$. And $H(p)\neq H(q)$ if $p\neq q$.</p>
+<p>At first, this problem seems too hard.</p>
+<p>Suppose, we have a <a href="https://en.wikipedia.org/wiki/Bijection">bijective function</a> $H(p)$ which return some small integer value for corresponding $p$.</p>
 <p>Hence, we can uniquely represent every $p$ by $H(p)$.</p>
 
 <div class="spoiler panel panel-default">
@@ -209,7 +211,7 @@ number of digit in $x$ is atmost $10^{6}$
         
       
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
-How to make $H(p)$
+<b>How to make $H(p)$</b>
 </a>
 
 <a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
@@ -217,10 +219,15 @@ click to hide
 </a>
 
 <div class='spoiler_block_content' style='display: none;'>
-<p>$H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]</p>
-<p>But, does this function follow [<strong>$H(p)\neq H(q)$ if $p\neq q$</strong>] this condition ?</p>
-<p>No. But we can choose some good $m$ [different for different types of problem], to do better performance[to follow the condition].</p>
-<p>We can take prime number as the value of $m$. It will be good.</p>
+<blockquote>
+<p>$H(p) = p \text{ (mod $m$)}$ [for a choosen $m$]<br />
+<br />
+But, this function is not bijective. That means it will give same output for different input. For example: $H(m+x) = H(2m+x) = &hellip; = H(mk+x)$ , but $m+x,2m+x&hellip;,mk+x$ are different.<br />
+<br />
+Although it is not bijective, we can choose some good $m$ [different for different types of problem], to do better performance[The function becomes bijective for random domain].<br />
+<br />
+We can take a prime number as the value of $m$. It will be good.</p>
+</blockquote>
 
 </div>
 </div>
@@ -230,7 +237,7 @@ click to hide
 <p>Again, calculate $H(n!) = n! \text{ (mod m)}$ , for all $n \in [0,10^{6}]$. And check, if it matches with $y$.</p>
 <p>Hence we can find $f^{-1}{(x)}$.</p>
 <p>If we choose good $m$ , our probability of collision[that is $H(p)=H(q)$ while $p\neq q$] will be too much low.</p>
-<p>If you don&rsquo;t know how to <code>mod</code> , read <a href="https://st3inum.github.io/posts/intro-to-modular-arithmetic/">this</a> article.</p>
+<p>If you don&rsquo;t know how to <code>mod</code>, read <a href="https://st3inum.github.io/posts/intro-to-modular-arithmetic/">this</a> article.</p>
 
 
 
