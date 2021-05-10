@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/tags/2-pointer/</loc>
+    <lastmod>2021-05-10T23:00:02+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/atcoder-abc032c/</loc>
+    <lastmod>2021-05-10T23:00:02+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/</loc>
+    <lastmod>2021-05-10T23:00:02+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-05-10T23:00:02+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-05-10T23:00:02+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/tags/hashing/</loc>
     <lastmod>2021-05-10T18:17:14+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/hashing2-double-hash/</loc>
-    <lastmod>2021-05-10T18:17:14+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-05-10T18:17:14+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-05-10T18:17:14+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-05-10T18:17:14+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/posts/kattis-inversefactorial/</loc>

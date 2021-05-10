@@ -154,6 +154,59 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://st3inum.github.io/posts/uva-12775/">Gift Dilemma - UVA 12775</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2021-05-07
+          </span>
+          
+            <span class="post-author">:: steinum</span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://st3inum.github.io/tags/diophantine-equation/">diophantine equation</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/extended-euclid/">extended euclid</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/codemarshal/">codemarshal</a>&nbsp;
+            
+            #<a href="https://st3inum.github.io/tags/popoviciu/">popoviciu</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          $Ax+By+Cz=P$ , $0\le x,y,z$ and $200 \le \frac{C}{gcd(A,B,C)}$.
+For given $A,B,C,P$ find number of triplet $(x,y,z)$.
+Solution: \begin{align} 200 &amp;\le \frac{C}{gcd(A,B,C)} \newline C &amp;\ge 200\times gcd(A,B,C) \newline \therefore C &amp;\ge 200 \end{align}
+Hence, we will rewrite the eqation as $Ax+By+Cz=P \Longrightarrow Ax+By=P-Cz=P'$
+We will iterate over all possible values of $P'$(there will be maximum $\frac{10^{8}}{200}$), and for each value of $P'$ we will find number of pair $(x,y)$ that satisfy $Ax+By=P'$ , and sum them up.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/posts/uva-12775/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://st3inum.github.io/posts/codechef-sandwich/">Long Sandwich - Codechef SANDWICH</a>
         </h1>
         <div class="post-meta">
@@ -343,55 +396,6 @@ Inside Math:  $\pi(n) \approx \frac{n}{ln(n)}$ [Prime number approximation] $rub
         <div>
           <a class="read-more button"
             href="/posts/codeforces-568a/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://st3inum.github.io/posts/toph-complex-tashreef/">Complex Tashreef - Toph</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2021-04-26
-          </span>
-          
-            <span class="post-author">:: steinum</span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://st3inum.github.io/tags/digit-dp/">digit dp</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/lucas-theorem/">lucas theorem</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/divide-and-conquer/">divide and conquer</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/toph/">toph</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          Statement: In this problem you are asked to calculate : $\sum_{i=L}^{R}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ , for given $L$ and $R$.
-Inside Math: From the lucas' theorem we can state that, $\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)}\equiv 1]} = 2^{f(i)}$ . [$f(i) = \text{ number of one in binary representation of } i$]
-Suppose , $S(x) = \sum_{i=0}^{x}{\sum_{j=0}^{i}{[\binom{i}{j} \text{ (mod 2)} \equiv 0]}}$ . Hence , our answer will be $S(R)-S(L-1)$
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/posts/toph-complex-tashreef/">Read more →</a>
         </div>
         
       </div>

@@ -154,6 +154,52 @@
     
       <div class="post on-list">
         <h1 class="post-title">
+          <a href="https://st3inum.github.io/posts/atcoder-abc032c/">AtCoder ABC-032 C</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2021-05-10
+          </span>
+          
+            <span class="post-author">:: steinum</span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://st3inum.github.io/tags/2-pointer/">2-pointer</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+          
+          Given an array $S$ of length $n$ and an integer $k$.
+$\prod_{i=l}^{r}{S_{i}} \le k$
+Find maximum value of $(r-l+1)$
+ Constraints  click to hide    $1\le n \le 10^{5}$
+  $0\le k \le 10^{9}$
+  $0\le S_{i} \le 10^{9}$
+     Bruteforce Solution $O(n^2)$: If any value of $S$ is $0$ then the answer is $n$
+We call a segment $[l,r]$ valid if $\prod_{i=l}^{r}{S_{i}} \le k$
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/posts/atcoder-abc032c/">Read more →</a>
+        </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title">
           <a href="https://st3inum.github.io/posts/hashing2-double-hash/">Hashing 2 - Double Hash</a>
         </h1>
         <div class="post-meta">
@@ -322,59 +368,6 @@ Constraints  click to hide   $A_{i} \le 2^{60}$ $n\le 10^{5}$ $q\le 10^{5}$ $x \
         <div>
           <a class="read-more button"
             href="/posts/toph-modulo/">Read more →</a>
-        </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title">
-          <a href="https://st3inum.github.io/posts/uva-12775/">Gift Dilemma - UVA 12775</a>
-        </h1>
-        <div class="post-meta">
-          <span class="post-date">
-            2021-05-07
-          </span>
-          
-            <span class="post-author">:: steinum</span>
-          
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://st3inum.github.io/tags/diophantine-equation/">diophantine equation</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/number-theory/">number theory</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/extended-euclid/">extended euclid</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/uva/">uva</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/codemarshal/">codemarshal</a>&nbsp;
-            
-            #<a href="https://st3inum.github.io/tags/popoviciu/">popoviciu</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-        <div class="post-content">
-          
-          
-          $Ax+By+Cz=P$ , $0\le x,y,z$ and $200 \le \frac{C}{gcd(A,B,C)}$.
-For given $A,B,C,P$ find number of triplet $(x,y,z)$.
-Solution: \begin{align} 200 &amp;\le \frac{C}{gcd(A,B,C)} \newline C &amp;\ge 200\times gcd(A,B,C) \newline \therefore C &amp;\ge 200 \end{align}
-Hence, we will rewrite the eqation as $Ax+By+Cz=P \Longrightarrow Ax+By=P-Cz=P'$
-We will iterate over all possible values of $P'$(there will be maximum $\frac{10^{8}}{200}$), and for each value of $P'$ we will find number of pair $(x,y)$ that satisfy $Ax+By=P'$ , and sum them up.
-          
-          
-        </div>
-
-        
-        <div>
-          <a class="read-more button"
-            href="/posts/uva-12775/">Read more →</a>
         </div>
         
       </div>
