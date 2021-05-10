@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Unnamed Trick 1 :: MathBugs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
+ Constraints  click to hide    $1\le n \le 10^{5}$
+  $-10^{9} \le A_{i},B_{i} \le 10^{9}$
+     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://st3inum.github.io/posts/unnamed-trick-1/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z33JCMW35"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1Z33JCMW35');
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<link rel="stylesheet" href="https://st3inum.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://st3inum.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://st3inum.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Unnamed Trick 1">
+<meta property="og:description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
+ Constraints  click to hide    $1\le n \le 10^{5}$
+  $-10^{9} \le A_{i},B_{i} \le 10^{9}$
+     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
+<meta property="og:url" content="https://st3inum.github.io/posts/unnamed-trick-1/" />
+<meta property="og:site_name" content="MathBugs" />
+
+  <meta property="og:image" content="https://st3inum.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-05-11 03:01:48 &#43;0600 &#43;06" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container full headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    MathBugs
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://st3inum.github.io/posts/unnamed-trick-1/">Unnamed Trick 1</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-05-11 
+      </span>
+    
+    
+    <span class="post-author">:: steinum</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://st3inum.github.io/tags/math/">math</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/counting/">counting</a>&nbsp;
+    
+    #<a href="https://st3inum.github.io/tags/trick/">trick</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="prerequisite-task-1">Prerequisite Task 1:<a href="#prerequisite-task-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>You are given two array $A$ and $B$ of length $n$.<br />
+<br />
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$</p>
+</blockquote>
+
+<div class="spoiler panel panel-default">
+<div class='spoiler_block'>
+      
+        
+      
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show'>
+<b>Constraints</b>
+</a>
+
+<a href='#' class='spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide' style='display: none;'>
+click to hide
+</a>
+
+<div class='spoiler_block_content' style='display: none;'>
+<ul>
+<li>
+<p>$1\le n \le 10^{5}$</p>
+</li>
+<li>
+<p>$-10^{9} \le A_{i},B_{i} \le 10^{9}$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+
+  <div class="collapsable-code">
+    <input id="1" type="checkbox"  />
+    <label for="1">
+      <span class="collapsable-code__language">cpp</span>
+      
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code1">
+
+map&lt;int, int&gt; cnt;
+for (int j = 0; j &lt; n; j&#43;&#43;) {
+	cout &lt;&lt; cnt[B[j]] &lt;&lt; &#39;\n&#39;;
+	cnt[A[j]]&#43;&#43;;
+}
+</code></pre>
+  </div>
+
+
+
+<h2 id="prerequisite-task-2">Prerequisite Task 2:<a href="#prerequisite-task-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$</p>
+</blockquote>
+
+
+
+  <div class="collapsable-code">
+    <input id="2" type="checkbox"  />
+    <label for="2">
+      <span class="collapsable-code__language">cpp</span>
+      
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code2">
+
+long long ans = 0;
+map&lt;int, int&gt; cnt;
+for (int j = 0; j &lt; n; j&#43;&#43;) {
+	ans &#43;= cnt[B[j]];
+	cnt[A[j]]&#43;&#43;;
+}
+cout &lt;&lt; ans &lt;&lt; &#39;\n&#39;;
+</code></pre>
+  </div>
+
+
+
+<h2 id="problem-1---codeforces-1520-dsame-differenceshttpscodeforcescomcontest1520problemd-">Problem 1 - Codeforces 1520 D(<a href="https://codeforces.com/contest/1520/problem/D">Same Differences</a>) :<a href="#problem-1---codeforces-1520-dsame-differenceshttpscodeforcescomcontest1520problemd-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>You are given an array $a$ of $n$ integers. Count the number of pairs of indices $(i,j)$ such that $i&lt;j$ and $a_j−a_i=j−i$.</p>
+</blockquote>
+<h3 id="solution">Solution:<a href="#solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>\begin{align}
+a_j - a_i &amp;= j-i\newline
+a_j - j &amp;= a_i - i
+\end{align}</p>
+<p>Now, if we compare this with our second task, then $B_j=a_j-j$ and $A_i = a_i - i$</p>
+<p>Hence our solution will be:</p>
+
+
+
+  <div class="collapsable-code">
+    <input id="3" type="checkbox"  />
+    <label for="3">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">Same Differences</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code3">
+</code></pre>
+  </div>
+
+
+<script type="text/javascript">
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/1520d.cpp', false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById('code3');
+    div.textContent = '\n'+xmlHttp.responseText;
+    
+    
+</script>
+
+
+<h2 id="problem-2---toph-adorable-string-3httpstophcopadorable-string-3">Problem 2 - Toph (<a href="https://toph.co/p/adorable-string-3">Adorable String &lt;3</a>)<a href="#problem-2---toph-adorable-string-3httpstophcopadorable-string-3" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>Let’s call a string adorable if its number of consonant(s) is 1 more then its number of vowel(s).<br />
+<br />
+Find the number of adorable substring of a given string</p>
+</blockquote>
+<p>Suppose the given string is a $n$ length string , $s$[1 based indexing].</p>
+<p>Let&rsquo;s define some function.</p>
+<ul>
+<li>
+<p>$s[l,r] = \text{ substring of $s$ from $l$ to $r$ index(both inclusive)}$</p>
+</li>
+<li>
+<p>$V(i) = \text{ number of vowel in $s[1,i]$}$</p>
+</li>
+<li>
+<p>$C(i) = \text{ number of consonant in $s[1,i]$}$</p>
+</li>
+<li>
+<p>$V(l,r) = V(r)-V(l-1) = \text{ number of vowel in $s[l,r]$}$</p>
+</li>
+<li>
+<p>$C(l,r) = C(r)-C(l-1) = \text{ number of consonant in $s[l,r]$}$</p>
+</li>
+</ul>
+<p>Hence, we can get these equations for $s[l+1,r]$:</p>
+<ul>
+<li>
+<p>$V(l+1,r) + C(l+1,r) = r-l$ [total length of s[l+1,r] equal to number of vowel + number of consonant]</p>
+</li>
+<li>
+<p>$V(l+1,r) +1 = C(l+1,r)$ [if $s[l+1,r]$ is adorable]</p>
+</li>
+</ul>
+<p>Solving the both equation we can get:
+\begin{align}
+2V(l+1,r) +1 &amp;=r-l\newline
+2(V(r)-V(l))+1 &amp;= r-l\newline
+2V(r)-2V(l)+1 &amp;=r-l\newline
+2V(r)-r+1&amp;=2V(l)-l
+\end{align}</p>
+<p>Now if we convert this problem in our second task, $B_{r} = 2V(r)-r+1$ and $A_{l}=2V(l)-l$ and $A_{0} = 0$</p>
+<p>Hence, our code will be :</p>
+
+
+
+  <div class="collapsable-code">
+    <input id="4" type="checkbox"  />
+    <label for="4">
+      <span class="collapsable-code__language">cpp</span>
+      <span class="collapsable-code__title">Adorable String &lt;3</span>
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code4">
+</code></pre>
+  </div>
+
+
+<script type="text/javascript">
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/adorable-string-3.cpp', false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById('code4');
+    div.textContent = '\n'+xmlHttp.responseText;
+    
+    
+</script>
+
+
+<h2 id="reference">Reference:<a href="#reference" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>
+<p><a href="https://toph.co/p/adorable-string-3">Toph - Adorable String &lt;3</a></p>
+</li>
+<li>
+<p><a href="https://codeforces.com/contest/1520/problem/D">Codeforces - Same Differences</a></p>
+</li>
+</ul>
+<h2 id="similar-problem">Similar Problem:<a href="#similar-problem" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="https://codeforces.com/gym/101401/problem/C">Smiley Faces (C) - 2017 PSUT Coding Marathon</a> [<strong>Hard</strong>]</li>
+</ul>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://st3inum.github.io/posts/atcoder-abc032c/">
+                <span class="button__text">AtCoder ABC-032 C</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="https://st3inum.github.io/assets/spoiler.js"></script>
+<script src="https://st3inum.github.io/assets/spoiler.css"></script>
+
+
+<script src="https://st3inum.github.io/assets/main.js"></script>
+
+<script src="https://st3inum.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -6,7 +6,224 @@
     <description>Recent content in math on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Apr 2021 01:28:53 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 03:01:48 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unnamed Trick 1</title>
+      <link>https://st3inum.github.io/posts/unnamed-trick-1/</link>
+      <pubDate>Tue, 11 May 2021 03:01:48 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/unnamed-trick-1/</guid>
+      <description>Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
+ Constraints  click to hide    $1\le n \le 10^{5}$
+  $-10^{9} \le A_{i},B_{i} \le 10^{9}$
+     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$</description>
+      <content>&lt;h2 id=&#34;prerequisite-task-1&#34;&gt;Prerequisite Task 1:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are given two array $A$ and $B$ of length $n$.&lt;br /&gt;
+&lt;br /&gt;
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Constraints&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$1\le n \le 10^{5}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$-10^{9} \le A_{i},B_{i} \le 10^{9}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+
+map&amp;lt;int, int&amp;gt; cnt;
+for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) {
+	cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;;
+	cnt[A[j]]&amp;#43;&amp;#43;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+
+&lt;h2 id=&#34;prerequisite-task-2&#34;&gt;Prerequisite Task 2:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;2&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code2&#34;&gt;
+
+long long ans = 0;
+map&amp;lt;int, int&amp;gt; cnt;
+for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) {
+	ans &amp;#43;= cnt[B[j]];
+	cnt[A[j]]&amp;#43;&amp;#43;;
+}
+cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+
+&lt;h2 id=&#34;problem-1---codeforces-1520-dsame-differenceshttpscodeforcescomcontest1520problemd-&#34;&gt;Problem 1 - Codeforces 1520 D(&lt;a href=&#34;https://codeforces.com/contest/1520/problem/D&#34;&gt;Same Differences&lt;/a&gt;) :&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are given an array $a$ of $n$ integers. Count the number of pairs of indices $(i,j)$ such that $i&amp;lt;j$ and $a_j−a_i=j−i$.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution:&lt;/h3&gt;
+&lt;p&gt;\begin{align}
+a_j - a_i &amp;amp;= j-i\newline
+a_j - j &amp;amp;= a_i - i
+\end{align}&lt;/p&gt;
+&lt;p&gt;Now, if we compare this with our second task, then $B_j=a_j-j$ and $A_i = a_i - i$&lt;/p&gt;
+&lt;p&gt;Hence our solution will be:&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;3&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;3&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Same Differences&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code3&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/1520d.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code3&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;problem-2---toph-adorable-string-3httpstophcopadorable-string-3&#34;&gt;Problem 2 - Toph (&lt;a href=&#34;https://toph.co/p/adorable-string-3&#34;&gt;Adorable String &amp;lt;3&lt;/a&gt;)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let’s call a string adorable if its number of consonant(s) is 1 more then its number of vowel(s).&lt;br /&gt;
+&lt;br /&gt;
+Find the number of adorable substring of a given string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Suppose the given string is a $n$ length string , $s$[1 based indexing].&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s define some function.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$s[l,r] = \text{ substring of $s$ from $l$ to $r$ index(both inclusive)}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$V(i) = \text{ number of vowel in $s[1,i]$}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$C(i) = \text{ number of consonant in $s[1,i]$}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$V(l,r) = V(r)-V(l-1) = \text{ number of vowel in $s[l,r]$}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$C(l,r) = C(r)-C(l-1) = \text{ number of consonant in $s[l,r]$}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, we can get these equations for $s[l+1,r]$:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$V(l+1,r) + C(l+1,r) = r-l$ [total length of s[l+1,r] equal to number of vowel + number of consonant]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$V(l+1,r) +1 = C(l+1,r)$ [if $s[l+1,r]$ is adorable]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Solving the both equation we can get:
+\begin{align}
+2V(l+1,r) +1 &amp;amp;=r-l\newline
+2(V(r)-V(l))+1 &amp;amp;= r-l\newline
+2V(r)-2V(l)+1 &amp;amp;=r-l\newline
+2V(r)-r+1&amp;amp;=2V(l)-l
+\end{align}&lt;/p&gt;
+&lt;p&gt;Now if we convert this problem in our second task, $B_{r} = 2V(r)-r+1$ and $A_{l}=2V(l)-l$ and $A_{0} = 0$&lt;/p&gt;
+&lt;p&gt;Hence, our code will be :&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;4&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;4&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Adorable String &amp;lt;3&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code4&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/adorable-string-3.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code4&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://toph.co/p/adorable-string-3&#34;&gt;Toph - Adorable String &amp;lt;3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://codeforces.com/contest/1520/problem/D&#34;&gt;Codeforces - Same Differences&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;similar-problem&#34;&gt;Similar Problem:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeforces.com/gym/101401/problem/C&#34;&gt;Smiley Faces (C) - 2017 PSUT Coding Marathon&lt;/a&gt; [&lt;strong&gt;Hard&lt;/strong&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Leading and Trailing - UVA 11029</title>
       <link>https://st3inum.github.io/posts/uva-11029/</link>
