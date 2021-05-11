@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
 For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
+In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;lt;i) where $B_i=A_j$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $-10^{9} \le A_{i},B_{i} \le 10^{9}$
      cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
@@ -61,6 +62,7 @@ For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
 <meta property="og:title" content="Unnamed Trick 1">
 <meta property="og:description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
 For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
+In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;lt;i) where $B_i=A_j$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $-10^{9} \le A_{i},B_{i} \le 10^{9}$
      cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
@@ -180,7 +182,9 @@ For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
 <blockquote>
 <p>You are given two array $A$ and $B$ of length $n$.<br />
 <br />
-For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$</p>
+For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$<br />
+<br />
+In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&lt;i) where $B_i=A_j$</p>
 </blockquote>
 
 <div class="spoiler panel panel-default">
@@ -234,7 +238,9 @@ for (int j = 0; j &lt; n; j&#43;&#43;) {
 
 <h2 id="prerequisite-task-2">Prerequisite Task 2:<a href="#prerequisite-task-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <blockquote>
-<p>Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$</p>
+<p>Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$<br />
+<br />
+In other words, number of pair $(i,j)$ where $i&lt;j$ and $B_i=A_j$</p>
 </blockquote>
 
 
