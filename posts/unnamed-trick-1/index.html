@@ -7,11 +7,11 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
-For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
-In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;lt;i) where $B_i=A_j$
+For each $j$ ($0\le j \le n-1$) print $\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}$
+In other words, for each $j$($0\le j \le n-1$) print number of index $i$(i&amp;lt;j) where $B_j=A_i$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $-10^{9} \le A_{i},B_{i} \le 10^{9}$
-     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
+     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same as task 1, just find $\sum_{j=0}^{n-1}{\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}}$" />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://st3inum.github.io/posts/unnamed-trick-1/" />
@@ -61,11 +61,11 @@ In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;l
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Unnamed Trick 1">
 <meta property="og:description" content="Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
-For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
-In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;lt;i) where $B_i=A_j$
+For each $j$ ($0\le j \le n-1$) print $\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}$
+In other words, for each $j$($0\le j \le n-1$) print number of index $i$(i&amp;lt;j) where $B_j=A_i$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $-10^{9} \le A_{i},B_{i} \le 10^{9}$
-     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$" />
+     cpp   map&amp;lt;int, int&amp;gt; cnt; for (int j = 0; j &amp;lt; n; j&amp;#43;&amp;#43;) { cout &amp;lt;&amp;lt; cnt[B[j]] &amp;lt;&amp;lt; &amp;#39;\n&amp;#39;; cnt[A[j]]&amp;#43;&amp;#43;; }   Prerequisite Task 2:  Same as task 1, just find $\sum_{j=0}^{n-1}{\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}}$" />
 <meta property="og:url" content="https://st3inum.github.io/posts/unnamed-trick-1/" />
 <meta property="og:site_name" content="MathBugs" />
 
@@ -182,9 +182,9 @@ In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&amp;l
 <blockquote>
 <p>You are given two array $A$ and $B$ of length $n$.<br />
 <br />
-For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$<br />
+For each $j$ ($0\le j \le n-1$) print $\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}$<br />
 <br />
-In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&lt;i) where $B_i=A_j$</p>
+In other words, for each $j$($0\le j \le n-1$) print number of index $i$(i&lt;j) where $B_j=A_i$</p>
 </blockquote>
 
 <div class="spoiler panel panel-default">
@@ -238,9 +238,9 @@ for (int j = 0; j &lt; n; j&#43;&#43;) {
 
 <h2 id="prerequisite-task-2">Prerequisite Task 2:<a href="#prerequisite-task-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <blockquote>
-<p>Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$<br />
+<p>Same as <code>task 1</code>, just find $\sum_{j=0}^{n-1}{\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}}$<br />
 <br />
-In other words, number of pair $(i,j)$ where $i&lt;j$ and $B_i=A_j$</p>
+In other words, number of pair $(i,j)$ where $i&lt;j$ and $B_j=A_i$</p>
 </blockquote>
 
 
@@ -266,6 +266,36 @@ cout &lt;&lt; ans &lt;&lt; &#39;\n&#39;;
 
 
 
+<h2 id="prerequisite-task-3">Prerequisite Task 3:<a href="#prerequisite-task-3" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>Same as <code>task 2</code>, just find $\sum_{j=l_B}^{r_B}{\sum_{i=l_A}^{r_A}{[A_{i}=B_{j}][i&lt;j]}}$<br />
+<br />
+In other words, number of pair $(i,j)$ where $i&lt;j$ , $i\in [l_A,r_A]$ and $j\in [l_B,r_B]$ and $B_j=A_i$</p>
+</blockquote>
+
+
+
+  <div class="collapsable-code">
+    <input id="3" type="checkbox"  />
+    <label for="3">
+      <span class="collapsable-code__language">cpp</span>
+      
+      <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
+    </label>
+    <pre class="language-cpp" ><code id="code3">
+
+long long ans = 0;
+map&lt;int, int&gt; cnt;
+for (int j = min(la, lb); j &lt;= rb; j&#43;&#43;) {
+    if (lb &lt;= j &amp;&amp; j &lt;= rb)ans &#43;= cnt[B[j]];
+    if (la &lt;= j &amp;&amp; j &lt;= ra)cnt[A[j]]&#43;&#43;;
+}
+cout &lt;&lt; ans &lt;&lt; &#39;\n&#39;;
+</code></pre>
+  </div>
+
+
+
 <h2 id="problem-1---codeforces-1520-dsame-differenceshttpscodeforcescomcontest1520problemd-">Problem 1 - Codeforces 1520 D(<a href="https://codeforces.com/contest/1520/problem/D">Same Differences</a>) :<a href="#problem-1---codeforces-1520-dsame-differenceshttpscodeforcescomcontest1520problemd-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <blockquote>
 <p>You are given an array $a$ of $n$ integers. Count the number of pairs of indices $(i,j)$ such that $i&lt;j$ and $a_j−a_i=j−i$.</p>
@@ -275,19 +305,19 @@ cout &lt;&lt; ans &lt;&lt; &#39;\n&#39;;
 a_j - a_i &amp;= j-i\newline
 a_j - j &amp;= a_i - i
 \end{align}</p>
-<p>Now, if we compare this with our second task, then $B_j=a_j-j$ and $A_i = a_i - i$</p>
+<p>Now, if we compare this with our <code>task 2</code>, then $B_j=a_j-j$ and $A_i = a_i - i$</p>
 <p>Hence our solution will be:</p>
 
 
 
   <div class="collapsable-code">
-    <input id="3" type="checkbox"  />
-    <label for="3">
+    <input id="4" type="checkbox"  />
+    <label for="4">
       <span class="collapsable-code__language">cpp</span>
       <span class="collapsable-code__title">Same Differences</span>
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
-    <pre class="language-cpp" ><code id="code3">
+    <pre class="language-cpp" ><code id="code4">
 </code></pre>
   </div>
 
@@ -296,7 +326,7 @@ a_j - j &amp;= a_i - i
   var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/codeforces\/1520d.cpp', false ); 
     xmlHttp.send( null );
-    var div = document.getElementById('code3');
+    var div = document.getElementById('code4');
     div.textContent = '\n'+xmlHttp.responseText;
     
     
@@ -344,19 +374,19 @@ Find the number of adorable substring of a given string</p>
 2V(r)-2V(l)+1 &amp;=r-l\newline
 2V(r)-r+1&amp;=2V(l)-l
 \end{align}</p>
-<p>Now if we convert this problem in our second task, $B_{r} = 2V(r)-r+1$ and $A_{l}=2V(l)-l$ and $A_{0} = 0$</p>
+<p>Now if we convert this problem in our <code>task 3</code>, $B_{r} = 2V(r)-r+1$ and $A_{l}=2V(l)-l$ and $A_{0} = 0$ here $l \in [0,n-1]$ and $r \in [1,n]$</p>
 <p>Hence, our code will be :</p>
 
 
 
   <div class="collapsable-code">
-    <input id="4" type="checkbox"  />
-    <label for="4">
+    <input id="5" type="checkbox"  />
+    <label for="5">
       <span class="collapsable-code__language">cpp</span>
       <span class="collapsable-code__title">Adorable String &lt;3</span>
       <span class="collapsable-code__toggle" data-label-expand="Show" data-label-collapse="Hide"></span>
     </label>
-    <pre class="language-cpp" ><code id="code4">
+    <pre class="language-cpp" ><code id="code5">
 </code></pre>
   </div>
 
@@ -365,7 +395,7 @@ Find the number of adorable substring of a given string</p>
   var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", 'https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/adorable-string-3.cpp', false ); 
     xmlHttp.send( null );
-    var div = document.getElementById('code4');
+    var div = document.getElementById('code5');
     div.textContent = '\n'+xmlHttp.responseText;
     
     

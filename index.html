@@ -183,11 +183,11 @@
           
           
           Prerequisite Task 1:  You are given two array $A$ and $B$ of length $n$.
-For each $i$ ($0\le i \le n-1$) print $\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}$
-In other words, for each $i$($0\le i \le n-1$) print number of index $j$(j&lt;i) where $B_i=A_j$
+For each $j$ ($0\le j \le n-1$) print $\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}$
+In other words, for each $j$($0\le j \le n-1$) print number of index $i$(i&lt;j) where $B_j=A_i$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $-10^{9} \le A_{i},B_{i} \le 10^{9}$
-     cpp   map&lt;int, int&gt; cnt; for (int j = 0; j &lt; n; j&#43;&#43;) { cout &lt;&lt; cnt[B[j]] &lt;&lt; &#39;\n&#39;; cnt[A[j]]&#43;&#43;; }   Prerequisite Task 2:  Same problem, just find $\sum_{i=0}^{n-1}{\sum_{j=0}^{i-1}{[A_{j}=B_{i}]}}$
+     cpp   map&lt;int, int&gt; cnt; for (int j = 0; j &lt; n; j&#43;&#43;) { cout &lt;&lt; cnt[B[j]] &lt;&lt; &#39;\n&#39;; cnt[A[j]]&#43;&#43;; }   Prerequisite Task 2:  Same as task 1, just find $\sum_{j=0}^{n-1}{\sum_{i=0}^{j-1}{[A_{i}=B_{j}]}}$
           
           
         </div>
