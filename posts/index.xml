@@ -289,8 +289,7 @@ Find the number of adorable substring of a given string&lt;/p&gt;
       
       <guid>https://st3inum.github.io/posts/atcoder-abc032c/</guid>
       <description>Given an array $S$ of length $n$ and an integer $k$.
-$\prod_{i=l}^{r}{S_{i}} \le k$
-Find maximum value of $(r-l+1)$
+Find maximum value of $(r-l+1)$ such that $\prod_{i=l}^{r}{S_{i}} \le k$
  Constraints  click to hide    $1\le n \le 10^{5}$
   $0\le k \le 10^{9}$
   $0\le S_{i} \le 10^{9}$
@@ -299,9 +298,7 @@ We call a segment $[l,r]$ valid if $\prod_{i=l}^{r}{S_{i}} \le k$</description>
       <content>&lt;blockquote&gt;
 &lt;p&gt;Given an array $S$ of length $n$ and an integer $k$.&lt;br /&gt;
 &lt;br /&gt;
-$\prod_{i=l}^{r}{S_{i}} \le k$&lt;br /&gt;
-&lt;br /&gt;
-Find maximum value of $(r-l+1)$&lt;/p&gt;
+Find maximum value of $(r-l+1)$ such that $\prod_{i=l}^{r}{S_{i}} \le k$&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;div class=&#34;spoiler panel panel-default&#34;&gt;
