@@ -115,7 +115,7 @@ b &amp;amp;=  2\times |C|.|V|\newline
 \text{and, } c &amp;amp;= |C|^{2} - R^{2} = |C|.|C| - R^{2}\newline
 \end{align}&lt;/p&gt;
 &lt;p&gt;Again, we can rewrite the equation as $ax^2+bx+c\le 0$ and we need to find the smallest such $x$.&lt;/p&gt;
-&lt;p&gt;We can use &lt;code&gt;ternary search&lt;/code&gt;. Alternatively, we can just solve the equation(as &lt;a href=&#34;https://st3inum.github.io/posts/toph-the-multiplayer-action-game/&#34;&gt;quadratic equation&lt;/a&gt;) and find the minimum such $x$.&lt;/p&gt;
+&lt;p&gt;We can use &lt;code&gt;ternary search&lt;/code&gt;. Alternatively, we can just solve the equation(as &lt;a href=&#34;https://en.wikipedia.org/wiki/Quadratic_equation&#34;&gt;quadratic equation&lt;/a&gt;) and find the minimum such $x$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;We must handle some cases, like $R1=R2$ or $a=0$&lt;/strong&gt;&lt;/p&gt;
 
 
