@@ -41,6 +41,7 @@ click to hide
 &lt;/a&gt;
 
 &lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;There will be atmost $10^{5}$ testcases.&lt;/p&gt;
@@ -52,6 +53,7 @@ click to hide
 &lt;p&gt;All other integers will be in range $[1,10^{4}]$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -74,8 +76,10 @@ click to hide
 &lt;/a&gt;
 
 &lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;hr /&gt;
 &lt;p&gt;if $\text{distance}(C1,C2)\le |R1-R2|$&lt;/p&gt;
 &lt;p&gt;In other words, $|C1-C2| \le |R1-R2|$ Considering $C1$ and $C2$ as vectors.&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
