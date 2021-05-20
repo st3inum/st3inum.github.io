@@ -6,7 +6,146 @@
     <description>Recent content in Posts on MathBugs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 May 2021 03:01:48 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 May 2021 15:18:06 +0600</lastBuildDate><atom:link href="https://st3inum.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Multiplayer Action Game - Toph</title>
+      <link>https://st3inum.github.io/posts/toph-the-multiplayer-action-game/</link>
+      <pubDate>Thu, 20 May 2021 15:18:06 +0600</pubDate>
+      
+      <guid>https://st3inum.github.io/posts/toph-the-multiplayer-action-game/</guid>
+      <description>You are given two n-sphere, centered at C1, C2 and having a radius of R1, R2 respectively The velocity vector of the two n-sphere is V1, V2 respectively.
+Find the minimum time, when the smaller n-sphere will be fully inside of the bigger one.
+If it is impossible/minimum time is greater than 100000, then print -1.
+ Constraints  click to hide    There will be atmost $10^{5}$ testcases.</description>
+      <content>&lt;blockquote&gt;
+&lt;p&gt;You are given two &lt;a href=&#34;https://en.wikipedia.org/wiki/N-sphere&#34;&gt;n-sphere&lt;/a&gt;, centered at C1, C2 and having a radius of R1, R2 respectively &lt;br /&gt;
+&lt;br /&gt;
+The velocity vector of the two n-sphere is V1, V2 respectively.&lt;br /&gt;
+&lt;br /&gt;
+Find the minimum time, when the smaller n-sphere will be fully inside of the bigger one.&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;If it is impossible/minimum time is greater than 100000, then print &lt;code&gt;-1&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Constraints&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There will be atmost $10^{5}$ testcases.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$2\le n \le 10$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All other integers will be in range $[1,10^{4}]$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;inside-math&#34;&gt;Inside Math:&lt;/h2&gt;
+&lt;p&gt;If &lt;code&gt;n=2&lt;/code&gt;, when the smaller n-sphere will be fully inside of the bigger one?
+
+&lt;div class=&#34;spoiler panel panel-default&#34;&gt;
+&lt;div class=&#39;spoiler_block&#39;&gt;
+      
+        
+      
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-in spoiler_block_show&#39;&gt;
+&lt;b&gt;Answer&lt;/b&gt;
+&lt;/a&gt;
+
+&lt;a href=&#39;#&#39; class=&#39;spoiler-block-icon spoiler-block-icon-zoom-out spoiler_block_hide&#39; style=&#39;display: none;&#39;&gt;
+click to hide
+&lt;/a&gt;
+
+&lt;div class=&#39;spoiler_block_content&#39; style=&#39;display: none;&#39;&gt;
+&lt;p&gt;if $\text{distance}(C1,C2)\le |R1-R2|$&lt;/p&gt;
+&lt;p&gt;In other words, $|C1-C2| \le |R1-R2|$ Considering $C1$ and $C2$ as vectors.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;In the case of n-dimension, the answer won&amp;rsquo;t be different.&lt;/p&gt;
+&lt;p&gt;After $x$ second the new position of $C1$ will be $(C1+x\times V1)$ and the new position of $C2$ will be $(C2+x\times V2)$.&lt;/p&gt;
+&lt;p&gt;If in $x$ second the smaller circle will be inside of the bigger ones, then the following condition must be true.&lt;/p&gt;
+&lt;p&gt;\begin{align}
+|(C1+x\times V1)-(C2+x\times V2)| &amp;amp;\le |R1-R2| \newline
+|(C1 - C2) + (x\times V1 - x\times V2)| &amp;amp;\le |R1-R2| \newline
+|(C1 - C2) + x\times( V1 -  V2)| &amp;amp;\le |R1-R2| \newline
+|(C1 - C2) + x\times( V1 -  V2)|^{2} &amp;amp;\le |R1-R2|^{2} \newline
+\end{align}
+Let&amp;rsquo;s assume,
+\begin{align}
+C &amp;amp;= C1 - C2\newline
+V &amp;amp;= V1 - V2\newline
+R &amp;amp;= |R1-R2|\newline
+\end{align}
+Hence, we can rewrite the equation as,
+\begin{align}
+|(C1 - C2) + x\times( V1 -  V2)|^{2} &amp;amp;\le |R1-R2|^{2} \newline
+|C + xV|^{2} &amp;amp;\le R^{2} \newline
+|C|^{2} + |xV|^{2} +2\times |C|.|xV| &amp;amp;\le R^{2} \newline
+|C|^{2} + x^{2}|V|^{2} +2x\times |C|.|V| &amp;amp;\le R^{2} \newline
+x^{2}|V|^{2} +2x\times |C|.|V| + (|C|^{2} - R^{2}) &amp;amp;\le 0 \newline
+\end{align}
+Let&amp;rsquo;s assume,
+\begin{align}
+a &amp;amp;=  |V|^{2} = |V|.|V|\newline
+b &amp;amp;=  2\times |C|.|V|\newline
+\text{and, } c &amp;amp;= |C|^{2} - R^{2} = |C|.|C| - R^{2}\newline
+\end{align}&lt;/p&gt;
+&lt;p&gt;Again, we can rewrite the equation as $ax^2+bx+c\le 0$ and we need to find the smallest such $x$.&lt;/p&gt;
+&lt;p&gt;We can use &lt;code&gt;ternary search&lt;/code&gt;. Alternatively, we can just solve the equation and find the minimum such $x$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We must handle some cases, like $R1=R2$ or $a=0$&lt;/strong&gt;&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34;  /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;cpp&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;The Multiplayer Action Game&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;Show&#34; data-label-collapse=&#34;Hide&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-cpp&#34; &gt;&lt;code id=&#34;code1&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( &#34;GET&#34;, &#39;https:\/\/raw.githubusercontent.com\/st3inum\/blog\/master\/codes\/toph\/the-multiplayer-action-game.cpp&#39;, false ); 
+    xmlHttp.send( null );
+    var div = document.getElementById(&#39;code1&#39;);
+    div.textContent = &#39;\n&#39;+xmlHttp.responseText;
+    
+    
+&lt;/script&gt;
+
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://toph.co/p/the-multiplayer-action-game&#34;&gt;Toph - The Multiplayer Action Game&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Unnamed Trick 1</title>
       <link>https://st3inum.github.io/posts/unnamed-trick-1/</link>

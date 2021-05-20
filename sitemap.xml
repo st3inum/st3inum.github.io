@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://st3inum.github.io/tags/geometry/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/posts/toph-the-multiplayer-action-game/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
+    <loc>https://st3inum.github.io/tags/toph/</loc>
+    <lastmod>2021-05-20T15:18:06+06:00</lastmod>
+  </url><url>
     <loc>https://st3inum.github.io/tags/counting/</loc>
     <lastmod>2021-05-11T03:01:48+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/math/</loc>
-    <lastmod>2021-05-11T03:01:48+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/</loc>
-    <lastmod>2021-05-11T03:01:48+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/posts/</loc>
-    <lastmod>2021-05-11T03:01:48+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/</loc>
     <lastmod>2021-05-11T03:01:48+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/trick/</loc>
@@ -54,9 +63,6 @@
     <lastmod>2021-05-08T14:57:26+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/number-theory/</loc>
-    <lastmod>2021-05-08T14:57:26+06:00</lastmod>
-  </url><url>
-    <loc>https://st3inum.github.io/tags/toph/</loc>
     <lastmod>2021-05-08T14:57:26+06:00</lastmod>
   </url><url>
     <loc>https://st3inum.github.io/tags/codemarshal/</loc>
